@@ -9,60 +9,133 @@ This theme is uncopyrighted, free, and offered as is.
 .
 */
 
-/*@import url('http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic');*/
+/* font-family from googleapis */
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
-@import url('http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+@import url('http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; color: #4d4d4d; font-family: 'Droid Sans', Verdana, Geneva, sans-serif; font-size: 100%; vertical-align: baseline; }
+body { line-height: 1; padding: 20px 40px; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 
 body {
-	background: #fff; 
-	font: 18px 'Droid Serif', bodyfont, serif;
-	color: #333;
-        line-height: 30px;
-	}
-	
-h1 {font-family: 'Droid Sans', sans-serif; font-size: 1em; color:#333; font-weight:normal;  padding: 20px 0px 0px 0px;}
-h2 {font-family: 'Droid Sans', sans-serif; font-size: 1.5em; color:#333; line-height:26px; font-weight:normal; padding: 5px 0px 10px 0px;}
-h3 {font-family: 'Droid Sans', sans-serif; font-size: 18px; color:#666; line-height: 15px; text-indent: 0px; padding: 10px 0px 0px 0px;}
-h4 {font-family: Georgia, "Times New Roman", Times, serif; font-size: 1em; color:#000000;}
-h5 {font-size: 9pt; color:#000000;}
+    background: #fff; 
+    font-size: 18px;
+    line-height: 1.6667;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 20px 0px; }
+h1 { font-size: 40px; } 
+h2 { font-size: 33.33333px; }
+h3 { font-size: 30px; }
+h4 { font-size: 26.66667px; }
+h5 { font-size: 23.33333px; }
+h6 { font-size: 20px; }
 
 img{border:none;}
 img a{border:none;}
-blockquote{border-left:1px solid #A5ABAB; margin:0px; padding:0 12px 0 12px;}
 
-p{line-height: 30px; margin:30px auto; text-indent: 0px;}
+p {
+    font-size: 18px;
+    line-height: 1.6667;
+    margin:30px auto;
+    text-indent: 0px;
+}
 
-a {text-decoration: none;}
-a:link {color: #333; text-decoration: none;}
-a:visited {color: #333; text-decoration: none;}
-a:hover {color: #999; text-decoration: none;}
+blockquote{
+    border-left: 4px double #bfbfbf;
+    padding: 5px 5px 10px 20px;
+}
 
-ul{padding: .5em 0em 1em 3.2em;}
-li{line-height: 30px; padding: 6px 0 0 0;}
+blockquote p {
+    font-family: "Droid Serif", Cambria, "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 2.08333;
+}
 
-ol{padding: .5em 0em 0em 3.2em;}
-li{line-height: 30px; padding: 6px 0 0 0;}
+blockquote p i, blockquote p em { font-style: normal; }
 
+blockquote small {
+    color: #999999;
+    display: block;
+    font-size: 12.8px;
+    line-height: 1.90476;
+}
+
+blockquote small:before { content: '\2014 \00A0' }
+
+a:not(.btn) {
+    color: #2576cc;
+    text-decoration: none;
+}
+a:not(.btn):hover {
+    color: #07a6ed;
+    text-decoration: none;
+}
+
+ins {
+    background-color: rgba(239, 237, 82, 0.75);
+    padding: 2px 4px;
+    text-decoration: none;
+}
+
+del {
+    opacity: 0.75;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+abbr, acronym {
+    cursor: help;
+    border-bottom: 1px dotted #4d4d4d;
+}
+
+sup, sub { font-size: 75%; }
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
+
+code, pre {
+    background: #fcfcfc;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    color: #1486cc;
+    font-size: 14px;
+    padding: 5px;
+}
+
+pre {
+    color: #707070;
+    padding-left: 15px;
+}
+
+.pull-left { float: left }
+.pull-right { float: right }
+
+ul{
+    padding: .5em 0em 1em 3.2em;
+    list-style-type: circle;
+}
+
+ol{
+    padding: .5em 0em 0em 3.2em;
+    list-style-type: decimal;
+}
+
+li{ line-height: 1.6667; }
+
+#page-title a { color: #4d4d4d }
+#page-title a:hover { color: #999999; }
 
 #content {min-width: 20em; max-width: 30em; overflow: hidden;
-	margin-top:60px; margin-left:64px; margin-right:14px; margin-bottom:0px;}
-.entry a:link {color: #303030; text-decoration: none; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0;}
-.entry a:visited {color: #303030; text-decoration: none; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0;}
-.entry a:hover {color: #999; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0; text-decoration: none;}
-.entry strong{font-family: Georgia, "Times New Roman", Times, serif; font-weight: bold; color: #555555;}
+	margin-top:10px; margin-left:auto; margin-right:auto; margin-bottom:0px;}
 
-#footer {margin-left:115px}
-#footer {background:#fff; clear: both;}
-#footer p{padding:4px 0;margin: 0; color: #666; font-size:13px; font-family:helvetica, sans-serif; letter-spacing:4px}
-#footer a{color: #c0c0c0;text-decoration: none;}
-#footer a:hover{color: #999;text-decoration: none;}
+/* Footer */
+#footer { clear: both; }
+#footer p { margin: 30px auto; font-size: 12px; letter-spacing: 4px; }
 
-
-#arc {float: right; width:530px; overflow: hidden; margin-top:0px; margin-left:14px; margin-right:14px; margin-bottom:24px;}
-.arc p{color:#666; font-family: 'Verdana, sans-serif; font-size: 12px; font-weight: normal !important;}
-
-.year th{color:#666; font-family: Verdana, sans-serif; font-size: 22px; font-weight: bold;}
-.arctitle {color:#666; font-family: 'Verdana, sans-serif; font-size: 12px; font-weight: normal;}
-.arctitle th {color:#999; font-family: 'Verdana, sans-serif; font-size: 14px; font-weight: normal;}
-.arc2 {color:#999; font-family: 'Helvetica, sans-serif; font-size: 12px; font-weight: normal !important;}
-.arc2 th {color:#999; font-family: 'Helvetica, sans-serif; font-size: 12px; font-weight: normal !important;}
