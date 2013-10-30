@@ -1,0 +1,26 @@
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #666666;
+}
+
+a {
+  color: #3FA4F6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div#speech {
+  width: 100%;
+  display: block;
+  border-top: 1px solid  #F1F2F1;
+  border-bottom: 1px solid #F1F2F1;
+  text-align: justify;
+}
+
+div#speech h2 {
+  font-weight: 300;
+}
