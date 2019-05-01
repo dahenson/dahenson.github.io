@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thoughts on elementary Packaging // The Brain of Dane</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Thoughts on elementary Packaging" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://brainofdane.com/posts/thoughts-on-elementary-packaging/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="The Brain of Dane" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://brainofdane.com/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://brainofdane.com/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://brainofdane.com/css/style.css">
+
+    <meta name="generator" content="Hugo 0.55.0" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://brainofdane.com/">The Brain of Dane</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Thoughts on elementary Packaging</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/thoughts-on-elementary-packaging/" class="article-date">
+                <time datetime='2014-08-27T00:00:00.000&#43;00:00' itemprop="datePublished">2014-08-27</time>
+            </a>
+            
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<p>This is my rudimentary understanding of the evolution of package management in Linux, and why it&rsquo;s still a problem for the average user.</p>
+
+<p>In the beginning, there was source code. If you wanted an application on Linux, you went out, grabbed the &ldquo;tarball&rdquo; (the Linux equivalent of a zip/compressed folder) and compiled the source code on your machine. If that application required any other software, you had to download that and compile it too.</p>
+
+<p>For Windows and Mac users, this was a major deal breaker so they slunk back to their walled garden and complained that Linux was hard and stupid. I don&rsquo;t blame them. Can you imagine coming from a world of one-click installers only to be faced with source code and the command prompt? It&rsquo;s like going from using a simple toaster to building a fire and putting your bread on a stick. You still get the job done, but with far more effort than necessary.</p>
+
+<h3 id="management-of-packages">Management of Packages</h3>
+
+<p>Eventually, Linux grew out of its pragmatic, backwards ways and developed standardized package management systems. Volunteers all over the world would compile the applications for you and leave them in web repositories for you to download. Furthermore, if that application needed any other software, the package manager would download and install those too. It was a complete solution, and elegantly solved a lot of different problems all at once.</p>
+
+<p><em>As an aside, let me say that this is one of the great strengths of Linux. Instead of copying the &ldquo;competition&rdquo;, they blew everyone away with automated, centralized packaging systems&ndash;an app store before there was an app store. It may have taken them a while to get it right, but package management revolutionized the way Linux distributions were used.</em></p>
+
+<h3 id="return-of-the-command-prompt">Return of the Command Prompt</h3>
+
+<p>When Ubuntu took the scene with their refined desktop OS, they took package management a step further. First, they created <a href="https://launchpad.net">launchpad</a> as a way for developers to automate their package management. Now, developers merely have to create a few scripts and their source code magically becomes a package that can be downloaded and installed by any Ubuntu user.</p>
+
+<p>This was not necessarily new. It was a free centralized service, which greatly improved the process. What was new was the ability to create Personal Package Archives (PPAs). With a PPA, developers could create development repositories for users to easily test the latest <em>development</em> versions of their applications without compiling them.</p>
+
+<p>Why do I emphasize that these are development repositories? Because Ubuntu has an app store, and they still exclusively require applications to be submitted and tested by trained individuals. There are still a handful of stable repositories with approved software, and anything else may or may not work as advertised.</p>
+
+<p>Not all developers have submitted to the app store, and not all submitted applications make it through the process. I have heard that the approval process is long, and some applications merely get stuck in limbo. For this reason, most savvy users just add the development repositories at the risk of installing an unstable version.</p>
+
+<p>How do they add these repositories? Like this:</p>
+
+<pre><code>sudo add-apt-repository ppa:somerepo/app
+sudo apt-get update
+sudo apt-get install app
+</code></pre>
+
+<p>There&rsquo;s that command prompt again.</p>
+
+<h3 id="the-elementary-developer">The elementary Developer</h3>
+
+<p>Now we&rsquo;re getting down to the crux of the problem. I have nothing against public repositories, or app stores, or developing in the open with unstable PPAs. My main issue stems from the fact that elementary OS does not have an app store, and does not have a separate stable repository for third-party applications.</p>
+
+<p>Instead, the myriad of third-party applications cropping up are resorting to the lowest barrier of entry, which is PPAs. They develop a great application, figure out how to automate packaging, and then say &ldquo;come get it in my PPA!&rdquo;</p>
+
+<p>I am the worst offender with <a href="https://launchpad.net/agenda-tasks">agenda</a>.</p>
+
+<p>This wouldn&rsquo;t be a problem if two things were fixed:</p>
+
+<ol>
+<li>Make adding PPAs one-click simple <em>by default</em> in elementary OS without using the command line. (highly unlikely)</li>
+<li>Encourage developers to create a stable branch for their PPA, and <em>test, test, test</em> before releasing.</li>
+</ol>
+
+<p>I tend to hold elementary developers to a much higher standard than the rest of the Linux community. elementary OS strives to provide a first-class experience for all users. A first-class experience that doesn&rsquo;t require dropping into the command prompt, or dealing with bleeding-edge development branches.</p>
+
+<p>If the core OS doesn&rsquo;t have a release cycle because its developers strive for perfection, why shouldn&rsquo;t third-party developers do the same? We would all benefit from a higher standard of excellence in the community.</p>
+
+<h3 id="an-interim-solution">An Interim Solution</h3>
+
+<p>Some might say that we&rsquo;ll just wait for Freya+1, when the OS finally has a managed app store. While I have the utmost confidence in those guys and gals, I wouldn&rsquo;t hold my breath for a managed app store. We need a solution right now for the influx of users chomping at the bit to take stable Freya for a spin.</p>
+
+<p>My suggestion is that developers take a cue from the big dogs like Google (Chrome), Steam, and Skype. All of these have downloadable packages directly from their official site.</p>
+
+<p>This approach does two things. First, it drives developers towards the goal of stability. If you have to make one version of the package available, how much harder are you going to work to make it void of bugs?</p>
+
+<p>Second, there is a mechanism for adding your stable PPA during installation. I know it can be done, but I&rsquo;m not quite sure how yet. This is why when you install Steam or Chrome, you also get automatic updates. The package adds the PPA to your system and every time your system checks for updates, it also checks the application&rsquo;s repository. Developers rejoice! No need for writing your own update system. You can have this one for free!</p>
+
+<p>In the end, I am just really tired of having to add PPAs that are usually pointing at the current development code base. We can do better, and we should.</p>
+
+<p>If you have any other thoughts or comments, feel free to share on your social network of choice and tag me. I am but one man, and I have but one viewpoint.</p>
+
+        </div>
+
+        
+        
+        <div class="article-toc" >
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#management-of-packages">Management of Packages</a></li>
+<li><a href="#return-of-the-command-prompt">Return of the Command Prompt</a></li>
+<li><a href="#the-elementary-developer">The elementary Developer</a></li>
+<li><a href="#an-interim-solution">An Interim Solution</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/posts/test-flight/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Test Flight
+        </div>
+    </a>
+    
+    
+    <a href="/posts/fathering/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Fathering&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2019 The Brain of Dane
+            <br />
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos" target="_blank">Minos</a>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>
