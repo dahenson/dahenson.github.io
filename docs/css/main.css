@@ -1,0 +1,25 @@
+/* VARIABLES */
+:root {
+    --bg-color: #ffffff;
+    --fg-color: #333333;
+    --accent-color: #f37329;
+    --content-width: 35rem;
+}
+
+/* BASE */
+
+html {
+    background: var(--bg-color);
+    color: var(--fg-color);
+    font-family: sans-serif;
+}
+
+main {
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
