@@ -1,0 +1,35 @@
+/* VARIABLES */
+:root {
+    --bg-color: #ffffff;
+    --fg-color: #333333;
+    --accent-color: #f37329;
+    --muted-fg-color: #abaeac;
+    --content-width: 35rem;
+}
+
+/* BASE */
+
+html {
+    background: var(--bg-color);
+    color: var(--fg-color);
+    font-family: sans-serif;
+}
+
+main {
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer {
+    border-top: 1px dotted var(--muted-fg-color);
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0;
+    color: var(--muted-fg-color);
+    text-align: center;
+}
