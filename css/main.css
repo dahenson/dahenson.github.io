@@ -1,35 +1,60 @@
-/* VARIABLES */
 :root {
-    --bg-color: #ffffff;
-    --fg-color: #333333;
-    --accent-color: #f37329;
-    --muted-fg-color: #abaeac;
-    --content-width: 35rem;
+  --serif: 'Cinzel', serif;
+  --sans-serif: 'Open Sans', sans-serif;
+  --bg-color: #ffffff;
+  --fg-color: #333333;
+  --accent-color: #f37329;
+  --muted-fg-color: #abaeac;
+  --content-width: 40rem;
 }
 
 /* BASE */
 
 html {
-    background: var(--bg-color);
-    color: var(--fg-color);
-    font-family: sans-serif;
+  font-family: var(--sans-serif);
+  background: var(--bg-color);
+  color: var(--fg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  border-bottom: 1px dotted var(--muted-fg-color);
+}
+
+header h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+nav a {
+  text-transform: uppercase;
+  margin: 0 0 0 1rem;
+  padding: 0;
 }
 
 main {
-    max-width: var(--content-width);
-    margin: 0 auto;
+  max-width: var(--content-width);
+  margin: 0 auto;
 }
 
 a {
-    color: var(--accent-color);
-    text-decoration: none;
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 footer {
-    border-top: 1px dotted var(--muted-fg-color);
-    max-width: var(--content-width);
-    margin: 0 auto;
-    padding: 0;
-    color: var(--muted-fg-color);
-    text-align: center;
+  border-top: 1px dotted var(--muted-fg-color);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0;
+  color: var(--muted-fg-color);
+  text-align: center;
 }
