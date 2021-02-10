@@ -19,7 +19,7 @@ that feeling on _anybody_.
 I might change my tune in the next 10 years as the DFW urban sprawl overtakes
 and consumes Hood County, but I'll cross that bridge when I come to it.
 
-Reading
+Working
 -------
-I am currently reading [The City We Became](http://nkjemisin.com/books/the-city-we-became/)
-by N.K. Jemisin.
+I currently work for the awesome company behind [outstand](https://outstand.com).
+I love the company, and I love my team!
