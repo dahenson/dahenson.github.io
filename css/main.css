@@ -3,8 +3,8 @@
   --sans-serif: 'Karla', sans-serif;
   --bg-color: #ffffff;
   --fg-color: #333333;
-  --accent-color: #f37329;
-  --muted-fg-color: #abaeac;
+  --accent-color: #a10705;
+  --muted-fg-color: #485a6c;
   --content-width: 40rem;
 }
 
@@ -32,6 +32,10 @@ header {
 
 header h3 {
   margin: 1rem 0 0.5rem 0;
+}
+
+header h3 a {
+  color: var(--fg-color);
 }
 
 nav a {
