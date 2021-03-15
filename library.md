@@ -14,10 +14,13 @@ _Goal: Read more non-fiction to learn and grow._
 
 **Reading**
 
-- The City We Became by N.K. Jemesin
 - Iron Gold (Red Rising Saga, #4) by Pierce Brown
 - The Warehouse by Rob Hart
 - The Last Emperox (The Interdependency, #3) by John Scalzi
+
+**Finished**
+
+- The City We Became by N.K. Jemesin _(March 11, 2021)_
 
 ## Past
 
