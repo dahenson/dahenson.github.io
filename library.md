@@ -16,10 +16,13 @@ _Goal: Read more non-fiction to learn and grow._
 
 - Iron Gold (Red Rising Saga, #4) by Pierce Brown
 - The Warehouse by Rob Hart
-- The Last Emperox (The Interdependency, #3) by John Scalzi
+- Deep Work by Cal Newport
+- Never Quit by Ed Cole
+- Every Good Endeavor by Timothy Keller
 
 **Finished**
 
+- The Last Emperox (The Interdependency, #3) by John Scalzi _(April 8, 2021)_
 - The City We Became by N.K. Jemesin _(March 11, 2021)_
 
 ## Past
@@ -78,7 +81,6 @@ read in a year._
 **Want**
 - The River by Peter Heller
 - Digital Minimalism by Cal Newport
-- Deep Work by Cal Newport
 
 **Have**
 - Underground Airlines by Ben Winters
