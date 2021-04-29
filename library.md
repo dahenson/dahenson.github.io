@@ -15,13 +15,13 @@ _Goal: Read more non-fiction to learn and grow._
 **Reading**
 
 - Iron Gold (Red Rising Saga, #4) by Pierce Brown
-- The Warehouse by Rob Hart
 - Deep Work by Cal Newport
 - Never Quit by Ed Cole
 - Every Good Endeavor by Timothy Keller
 
 **Finished**
 
+- The Warehouse by Rob Hart _(April 26, 2021)_
 - The Last Emperox (The Interdependency, #3) by John Scalzi _(April 8, 2021)_
 - The City We Became by N.K. Jemesin _(March 11, 2021)_
 
