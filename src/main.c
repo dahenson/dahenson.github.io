@@ -8,18 +8,18 @@
 #define FAILURE 0;
 #define SUCCESS 1;
 
-typedef struct indexent
+typedef struct Page
 {
   char filename[512];
   char filepath[512];
-} indexent;
+} Page;
 
-typedef struct Siteindex
+static struct site_index
 {
   int len;
-  char srcpath[512];
-  struct indexent entries[512];
-} Siteindex;
+  char *srcpath;
+  struct Page pages[64];
+} site_index;
 
 int error(const char *msg, const char *val)
 {
@@ -27,7 +27,7 @@ int error(const char *msg, const char *val)
   return FAILURE;
 }
 
-int insert_content(const char *filepath, FILE *outfile)
+static int insert_content(const char *filepath, FILE *outfile)
 {
   int c;
 
@@ -43,7 +43,7 @@ int insert_content(const char *filepath, FILE *outfile)
   return SUCCESS;
 }
 
-int wrap_content(const char *infilepath, const char *outfilepath)
+static int wrap_content(const char *infilepath, const char *outfilepath)
 {
   FILE* outfile = fopen(outfilepath, "w");
 
@@ -89,7 +89,7 @@ int wrap_content(const char *infilepath, const char *outfilepath)
   return SUCCESS;
 }
 
-char *rtrim(char *str, const char *seps)
+static char *rtrim(char *str, const char *seps)
 {
   int i;
   i = strlen(str) - 1;
@@ -102,23 +102,23 @@ char *rtrim(char *str, const char *seps)
   return str;
 }
 
-int generate_sitemap(Siteindex *i, const char *path)
+static int generate_sitemap(const char *path)
 {
-  int j;
+  int i;
   char filename[512];
   char *outfilepath;
   FILE* outfile;
 
-  outfilepath = strcpy(i->entries[i->len].filepath, path);
-  strcpy(i->entries[i->len].filename, "sitemap.html");
+  outfilepath = strcpy(site_index.pages[site_index.len].filepath, path);
+  strcpy(site_index.pages[site_index.len].filename, "sitemap.html");
 
   strcat(outfilepath, "sitemap.html");
 
   if (!(outfile = fopen(outfilepath, "w")))
     return FAILURE;
 
-  for (j = 0; j < i->len; j++) {
-    strcpy(filename, i->entries[j].filename);
+  for (i = 0; i < site_index.len; i++) {
+    strcpy(filename, site_index.pages[i].filename);
     rtrim(filename, ".html");
     fprintf(outfile, "<a href=\"%s\">%s</a><br />\n", filename, filename);
   }
@@ -128,22 +128,22 @@ int generate_sitemap(Siteindex *i, const char *path)
   return SUCCESS;
 }
 
-int index_children(Siteindex *i, const char *path)
+static int index_children(const char *path)
 {
   DIR *dir;
   struct dirent *entry;
   char subdirpath[512];
 
   if (!(dir = opendir(path)))
-    return error("Indexing Children", path);
+    return error("Indexing Children", site_index.srcpath);
 
   while ((entry = readdir(dir)) != NULL) {
     switch (entry->d_type) {
       case (DT_REG):
-        strcpy(i->entries[i->len].filepath, path);
-        strcpy(i->entries[i->len].filename, entry->d_name);
+        strcpy(site_index.pages[site_index.len].filepath, path);
+        strcpy(site_index.pages[site_index.len].filename, entry->d_name);
 
-        i->len++;
+        site_index.len++;
         break;
 
       case (DT_DIR):
@@ -154,7 +154,7 @@ int index_children(Siteindex *i, const char *path)
         strcat(subdirpath, entry->d_name);
 
         printf("Indexing Subdirectory: %s\n", subdirpath);
-        index_children(i, subdirpath);
+        index_children(subdirpath);
         break;
 
       default:
@@ -168,43 +168,43 @@ int index_children(Siteindex *i, const char *path)
   return SUCCESS;
 }
 
-int generate_index(Siteindex *i, const char *path)
+static int generate_index()
 {
   char pwd[512];
 
   getcwd(pwd, 512);
 
-  chdir(path);
-  index_children(i, ".");
+  chdir(site_index.srcpath);
+  index_children(".");
 
   chdir(pwd);
-  generate_sitemap(i, path);
+  generate_sitemap(site_index.srcpath);
 
-  printf("Indexed %d pages.\n", i->len);
+  printf("Indexed %d pages.\n", site_index.len);
 
   return SUCCESS;
 }
 
-int generate_site(Siteindex *i, const char *outpath)
+static int generate_site(const char *outpath)
 {
-  int j;
+  int i;
   char infilepath[512];
   char outfilepath[512];
 
-  for (j = 0; j < i->len; j++) {
-    strcpy(infilepath, i->srcpath);
+  for (i = 0; i < site_index.len; i++) {
+    strcpy(infilepath, site_index.srcpath);
     strcat(infilepath, "/");
-    strcat(infilepath, i->entries[j].filepath);
+    strcat(infilepath, site_index.pages[i].filepath);
     strcat(infilepath, "/");
-    strcat(infilepath, i->entries[j].filename);
+    strcat(infilepath, site_index.pages[i].filename);
 
     strcpy(outfilepath, outpath);
     strcat(outfilepath, "/");
-    strcat(outfilepath, i->entries[j].filepath);
+    strcat(outfilepath, site_index.pages[i].filepath);
     mkdir(outfilepath, S_IRWXU);
 
     strcat(outfilepath, "/");
-    strcat(outfilepath, i->entries[j].filename);
+    strcat(outfilepath, site_index.pages[i].filename);
 
     if (!wrap_content(infilepath, outfilepath))
       return error("Building Page", outfilepath);
@@ -215,18 +215,14 @@ int generate_site(Siteindex *i, const char *outpath)
 
 int main()
 {
-  Siteindex site_index;
-  char *inputpath = "content";
-  char *outputpath = "..";
-
   site_index.len = 0;
-  strcpy(site_index.srcpath, inputpath);
+  site_index.srcpath = "content";
 
-  if (!generate_index(&site_index, inputpath)) {
+  if (!generate_index()) {
     printf("Failed to generate the index!\n");
     return 1;
   }
-  if (!generate_site(&site_index, outputpath)) {
+  if (!generate_site("..")) {
     printf("Failed to generate the site!\n");
     return 1;
   }
