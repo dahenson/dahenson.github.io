@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<unistd.h>
-#include<dirent.h>
 #include<string.h>
+#include<sys/dir.h>
 #include<sys/stat.h>
 #include<time.h>
 
@@ -17,7 +17,6 @@ typedef struct Page
 static struct site_index
 {
   int len;
-  char *srcpath;
   struct Page pages[64];
 } site_index;
 
@@ -89,19 +88,6 @@ static int wrap_content(const char *infilepath, const char *outfilepath)
   return SUCCESS;
 }
 
-static char *rtrim(char *str, const char *seps)
-{
-  int i;
-  i = strlen(str) - 1;
-
-  while (i >= 0 && strchr(seps, str[i]) != NULL) {
-    str[i] = '\0';
-    i--;
-  }
-
-  return str;
-}
-
 static int generate_sitemap(const char *path)
 {
   int i;
@@ -112,16 +98,20 @@ static int generate_sitemap(const char *path)
   outfilepath = strcpy(site_index.pages[site_index.len].filepath, path);
   strcpy(site_index.pages[site_index.len].filename, "sitemap.html");
 
+  strcat(outfilepath, "/");
   strcat(outfilepath, "sitemap.html");
 
   if (!(outfile = fopen(outfilepath, "w")))
     return FAILURE;
 
+  fputs("<ul>", outfile);
+
   for (i = 0; i < site_index.len; i++) {
     strcpy(filename, site_index.pages[i].filename);
-    rtrim(filename, ".html");
-    fprintf(outfile, "<a href=\"%s\">%s</a><br />\n", filename, filename);
+    fprintf(outfile, "<li><a href=\"%s\">%s</a></li>\n", filename, filename);
   }
+
+  fputs("</ul>", outfile);
 
   fclose(outfile);
 
@@ -135,7 +125,7 @@ static int index_children(const char *path)
   char subdirpath[512];
 
   if (!(dir = opendir(path)))
-    return error("Indexing Children", site_index.srcpath);
+    return error("Indexing Children", path);
 
   while ((entry = readdir(dir)) != NULL) {
     switch (entry->d_type) {
@@ -170,15 +160,9 @@ static int index_children(const char *path)
 
 static int generate_index()
 {
-  char pwd[512];
+  index_children("content");
 
-  getcwd(pwd, 512);
-
-  chdir(site_index.srcpath);
-  index_children(".");
-
-  chdir(pwd);
-  generate_sitemap(site_index.srcpath);
+  generate_sitemap("content");
 
   printf("Indexed %d pages.\n", site_index.len);
 
@@ -192,17 +176,11 @@ static int generate_site(const char *outpath)
   char outfilepath[512];
 
   for (i = 0; i < site_index.len; i++) {
-    strcpy(infilepath, site_index.srcpath);
-    strcat(infilepath, "/");
-    strcat(infilepath, site_index.pages[i].filepath);
+    strcpy(infilepath, site_index.pages[i].filepath);
     strcat(infilepath, "/");
     strcat(infilepath, site_index.pages[i].filename);
 
     strcpy(outfilepath, outpath);
-    strcat(outfilepath, "/");
-    strcat(outfilepath, site_index.pages[i].filepath);
-    mkdir(outfilepath, S_IRWXU);
-
     strcat(outfilepath, "/");
     strcat(outfilepath, site_index.pages[i].filename);
 
@@ -216,7 +194,6 @@ static int generate_site(const char *outpath)
 int main()
 {
   site_index.len = 0;
-  site_index.srcpath = "content";
 
   if (!generate_index()) {
     printf("Failed to generate the index!\n");
