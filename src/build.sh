@@ -11,3 +11,8 @@ cc -std=c89 -DDEBUG -Wall -Wno-unknown-pragmas -Wpedantic -Wshadow \
 
 # Clean
 rm main
+
+if [ -d "main.dSYM" ]
+then
+  rm -r "main.dSYM"
+fi
