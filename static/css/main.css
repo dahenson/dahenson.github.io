@@ -5,6 +5,7 @@
   --fg-color: #333333;
   --accent-color: #a10705;
   --muted-fg-color: #485a6c;
+  --muted-bg-color: #c0c0c0;
   --content-width: 40rem;
 }
 
@@ -47,6 +48,11 @@ main {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: 0.5rem 0;
+}
+
+.anecdote {
+  border-radius: 3px;
+  background-color: var(--muted-bg-color);
 }
 
 a {
