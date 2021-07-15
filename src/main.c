@@ -1,32 +1,28 @@
-#include<stdio.h>
-#include<string.h>
-#include<dirent.h>
-#include<sys/stat.h>
-#include<time.h>
+#include <dirent.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <time.h>
 
 #define FAILURE 0;
 #define SUCCESS 1;
 
-typedef struct Page
-{
+typedef struct Page {
   char filename[512];
   char filepath[512];
 } Page;
 
-static struct site_index
-{
+static struct site_index {
   int len;
   struct Page pages[64];
 } site_index;
 
-int error(const char *msg, const char *val)
-{
+int error(const char *msg, const char *val) {
   printf("ERROR: %s [%s]\n", msg, val);
   return FAILURE;
 }
 
-static int insert_content(const char *filepath, FILE *outfile)
-{
+static int insert_content(const char *filepath, FILE *outfile) {
   int c;
 
   FILE *content = fopen(filepath, "r");
@@ -41,9 +37,8 @@ static int insert_content(const char *filepath, FILE *outfile)
   return SUCCESS;
 }
 
-static int wrap_content(const char *infilepath, const char *outfilepath)
-{
-  FILE* outfile = fopen(outfilepath, "w");
+static int wrap_content(const char *infilepath, const char *outfilepath) {
+  FILE *outfile = fopen(outfilepath, "w");
 
   struct stat attr;
   char edited_time[22];
@@ -59,8 +54,11 @@ static int wrap_content(const char *infilepath, const char *outfilepath)
   fputs("  <head>\n", outfile);
   fputs("    <meta charset=\"utf8\">\n", outfile);
   fputs("    <title>Brain of Dane</title>\n", outfile);
-  fputs("    <meta name=\"description\" content=\"My Personal Blog\">\n", outfile);
-  fputs("    <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/main.css\">\n", outfile);
+  fputs("    <meta name=\"description\" content=\"My Personal Blog\">\n",
+        outfile);
+  fputs("    <link rel=\"stylesheet\" type=\"text/css\" "
+        "href=\"/static/css/main.css\">\n",
+        outfile);
   fputs("    <meta>\n", outfile);
   fputs("  </head>\n", outfile);
   fputs("  <body>\n", outfile);
@@ -87,12 +85,11 @@ static int wrap_content(const char *infilepath, const char *outfilepath)
   return SUCCESS;
 }
 
-static int generate_sitemap(const char *path)
-{
+static int generate_sitemap(const char *path) {
   int i;
   char filename[512];
   char *outfilepath;
-  FILE* outfile;
+  FILE *outfile;
 
   outfilepath = strcpy(site_index.pages[site_index.len].filepath, path);
   strcpy(site_index.pages[site_index.len].filename, "sitemap.html");
@@ -117,8 +114,7 @@ static int generate_sitemap(const char *path)
   return SUCCESS;
 }
 
-static int index_children(const char *path)
-{
+static int index_children(const char *path) {
   DIR *dir;
   struct dirent *entry;
   struct stat fileinfo;
@@ -147,8 +143,7 @@ static int index_children(const char *path)
   return SUCCESS;
 }
 
-static int generate_index()
-{
+static int generate_index() {
   index_children("content");
 
   generate_sitemap("content");
@@ -158,8 +153,7 @@ static int generate_index()
   return SUCCESS;
 }
 
-static int generate_site(const char *outpath)
-{
+static int generate_site(const char *outpath) {
   int i;
   char infilepath[512];
   char outfilepath[512];
@@ -180,8 +174,7 @@ static int generate_site(const char *outpath)
   return SUCCESS;
 }
 
-int main()
-{
+int main() {
   site_index.len = 0;
 
   if (!generate_index()) {
@@ -195,4 +188,3 @@ int main()
 
   return 0;
 }
-
