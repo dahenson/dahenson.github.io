@@ -10,7 +10,7 @@ cc -std=c89 -DDEBUG -Wall -Wno-unknown-pragmas -Wpedantic -Wshadow \
 ./main
 
 # Clean
-rm main
+rm "main"
 
 if [ -d "main.dSYM" ]
 then

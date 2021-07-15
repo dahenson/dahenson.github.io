@@ -121,34 +121,24 @@ static int index_children(const char *path)
 {
   DIR *dir;
   struct dirent *entry;
+  struct stat fileinfo;
   char subdirpath[512];
 
   if (!(dir = opendir(path)))
     return error("Indexing Children", path);
 
   while ((entry = readdir(dir)) != NULL) {
-    switch (entry->d_type) {
-      case (DT_REG):
-        strcpy(site_index.pages[site_index.len].filepath, path);
-        strcpy(site_index.pages[site_index.len].filename, entry->d_name);
+    strcpy(subdirpath, path);
+    strcat(subdirpath, "/");
+    strcat(subdirpath, entry->d_name);
 
-        site_index.len++;
-        break;
+    stat(subdirpath, &fileinfo);
 
-      case (DT_DIR):
-        if (strcmp(entry->d_name, "..") <= 0)
-          continue;
-        strcpy(subdirpath, path);
-        strcat(subdirpath, "/");
-        strcat(subdirpath, entry->d_name);
+    if (S_ISREG(fileinfo.st_mode)) {
+      strcpy(site_index.pages[site_index.len].filepath, path);
+      strcpy(site_index.pages[site_index.len].filename, entry->d_name);
 
-        printf("Indexing Subdirectory: %s\n", subdirpath);
-        index_children(subdirpath);
-        break;
-
-      default:
-        printf("Skipping: %s\n", entry->d_name);
-        break;
+      site_index.len++;
     }
   }
 
@@ -202,5 +192,7 @@ int main()
     printf("Failed to generate the site!\n");
     return 1;
   }
+
+  return 0;
 }
 
