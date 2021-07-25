@@ -5,7 +5,7 @@
   --fg-color: #333333;
   --accent-color: #a10705;
   --muted-fg-color: #485a6c;
-  --muted-bg-color: #c0c0c0;
+  --muted-bg-color: #fafafa;
   --content-width: 40rem;
 }
 
@@ -51,8 +51,15 @@ main {
 }
 
 .anecdote {
-  border-radius: 3px;
+  padding: 1em;
+  margin: 0 1em;
+  border: 1px solid #abacae;
+  border-radius: 0.5em;
   background-color: var(--muted-bg-color);
+}
+
+.anecdote p {
+    margin: 0 0 1em;
 }
 
 a {
