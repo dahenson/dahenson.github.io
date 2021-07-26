@@ -27,6 +27,7 @@ header {
   justify-content: space-between;
   align-items: baseline;
   margin: 0 auto;
+  padding: 0 0.5em;
   max-width: var(--content-width);
   border-bottom: 1px dotted var(--muted-fg-color);
 }
@@ -47,7 +48,7 @@ nav a {
 main {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 0.5rem 0;
+  padding: 0.5em 0.5em;
 }
 
 .anecdote {

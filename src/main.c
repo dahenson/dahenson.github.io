@@ -59,7 +59,7 @@ static int wrap_content(const char *infilepath, const char *outfilepath) {
   fputs("    <link rel=\"stylesheet\" type=\"text/css\" "
         "href=\"/static/css/main.css\">\n",
         outfile);
-  fputs("    <meta>\n", outfile);
+  fputs("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">", outfile);
   fputs("  </head>\n", outfile);
   fputs("  <body>\n", outfile);
   fputs("    <header>\n", outfile);
