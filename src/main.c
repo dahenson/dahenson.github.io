@@ -57,17 +57,23 @@ static int wrap_content(const char *infilepath, const char *outfilepath) {
   fputs("    <meta name=\"description\" content=\"My Personal Blog\">\n",
         outfile);
   fputs("    <link rel=\"stylesheet\" type=\"text/css\" "
+        "href=\"/static/css/normalize.css\">\n",
+        outfile);
+  fputs("    <link rel=\"stylesheet\" type=\"text/css\" "
+        "href=\"/static/css/typebase.css\">\n",
+        outfile);
+  fputs("    <link rel=\"stylesheet\" type=\"text/css\" "
         "href=\"/static/css/main.css\">\n",
         outfile);
   fputs("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">", outfile);
   fputs("  </head>\n", outfile);
   fputs("  <body>\n", outfile);
   fputs("    <header>\n", outfile);
-  fputs("      <h3><a href=\"/\">Dane Henson</a></h3>\n", outfile);
+  fputs("      <span><a href=\"/\">DH</a></span>\n", outfile);
   fputs("      <nav>\n", outfile);
-  fputs("      <a href=\"/\">home</a>\n", outfile);
-  fputs("      <a href=\"/now\">now</a>\n", outfile);
-  fputs("      <a href=\"/library\">library</a>\n", outfile);
+  fputs("        <a href=\"/\">home</a>\n", outfile);
+  fputs("        <a href=\"/now\">now</a>\n", outfile);
+  fputs("        <a href=\"/library\">library</a>\n", outfile);
   fputs("      </nav>\n", outfile);
   fputs("    </header>\n", outfile);
   fputs("    <main>\n\n", outfile);

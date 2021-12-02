@@ -32,17 +32,22 @@ header {
   border-bottom: 1px dotted var(--muted-fg-color);
 }
 
-header h3 {
-  margin: 1rem 0 0.5rem 0;
+header span {
+  margin: 0.5rem 0 0.5rem 0;
 }
 
-header h3 a {
+header span a {
   color: var(--fg-color);
 }
 
 nav a {
   margin: 0 0 0 1rem;
-  padding: 0;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  color: var(--bg-color);
+  background-color: var(--fg-color);
 }
 
 main {
@@ -71,8 +76,7 @@ a {
 footer {
   border-top: 1px dotted var(--muted-fg-color);
   max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0.5rem 0 0 0;
+  margin: 0.5rem auto;
   color: var(--muted-fg-color);
   text-align: center;
 }
