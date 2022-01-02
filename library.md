@@ -5,28 +5,32 @@ layout: default
 
 This page serves as a reading log for me to remember the books I’ve read.
 
+## 2022
+
+- **Reading**
+  - Greenlights by Matthew McConaughey
+  - All The Light We Cannot See by Anthony Doerr
+  - Underground Airlines by Ben Winters
+- **Finished**
+
 ## 2021
 
 _Goal: Read more non-fiction to learn and grow._
 
-- **Reading**
-  - All The Light We Cannot See by Anthony Doerr
-  - Illuminae (The Illuminae Files #1) by Amie Kaufman
-  - Underground Airlines by Ben Winters
-- **Finished**
-  - Project Hail Mary by Andy Weir _(September 1, 2021)_
-  - We Are Legion (We Are Bob) by Dennis E. Taylor _(August 20, 2019)_
-  - Animal Farm by George Orwell _(July 29, 2021)_
-  - Ready Player Two by Ernest Cline _(July 22, 2021)_
-  - The River by Peter Heller _(July 11, 2021)_
-  - Iron Gold (Red Rising Saga, #4) by Pierce Brown _(June 9, 2021)_
-  - Deep Work by Cal Newport _(May, 2021)_
-  - Never Quit by Ed Cole _(May, 2021)_
-  - The Hate U Give by Angie Thomas _(May 20, 2021)_
-  - Dog Man (#1) by Dav Pilkey _(May 18, 2021)_
-  - The Warehouse by Rob Hart _(April 26, 2021)_
-  - The Last Emperox (The Interdependency, #3) by John Scalzi _(April 8, 2021)_
-  - The City We Became by N.K. Jemesin _(March 11, 2021)_
+- Illuminae (The Illuminae Files #1) by Amie Kaufman _(December 31st, 2021)_
+- Project Hail Mary by Andy Weir _(September 1, 2021)_
+- We Are Legion (We Are Bob) by Dennis E. Taylor _(August 20, 2019)_
+- Animal Farm by George Orwell _(July 29, 2021)_
+- Ready Player Two by Ernest Cline _(July 22, 2021)_
+- The River by Peter Heller _(July 11, 2021)_
+- Iron Gold (Red Rising Saga, #4) by Pierce Brown _(June 9, 2021)_
+- Deep Work by Cal Newport _(May, 2021)_
+- Never Quit by Ed Cole _(May, 2021)_
+- The Hate U Give by Angie Thomas _(May 20, 2021)_
+- Dog Man (#1) by Dav Pilkey _(May 18, 2021)_
+- The Warehouse by Rob Hart _(April 26, 2021)_
+- The Last Emperox (The Interdependency, #3) by John Scalzi _(April 8, 2021)_
+- The City We Became by N.K. Jemesin _(March 11, 2021)_
 
 ## 2020
 
