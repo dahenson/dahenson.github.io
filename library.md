@@ -8,10 +8,11 @@ This page serves as a reading log for me to remember the books I’ve read.
 ## 2022
 
 - **Reading**
-  - Greenlights by Matthew McConaughey
-  - All The Light We Cannot See by Anthony Doerr
-  - Underground Airlines by Ben Winters
+  - The Wrong Stars (Axiom #1) by Tim Pratt
+  - The Late Show (Renee Ballard #1) by Michael Connelly
+  - A Hunter-Gatherer's Guide to the 21st Century: Evolution and the challenges of Modern Life by Heather E. Heying, Bret Weinstein
 - **Finished**
+  - Greenlights by Matthew McConaughey
 
 ## 2021
 
