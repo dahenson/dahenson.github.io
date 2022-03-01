@@ -6,11 +6,17 @@ layout: default
 A simple waffle recipe to help make use of your sourdough starter discard.
 Original recipe from [The Perfect Loaf](https://www.theperfectloaf.com/my-top-3-leftover-sourdough-starter-recipes/#h-golden-sourdough-starter-waffles).
 
+This requires some preparation starting the night before, but these waffles
+can be frozen after breakfast and reheated in a toaster. This is perfect
+for providing a tasty alternative to cereal or toast for the kids.
+
 ## Tools
 
 - Waffle Iron
 - Mixing Bowl
 - Spatula
+- Whisk
+- Spoon/Scoop (for pouring into the waffle iron
 - Hand Mixer (optional) for beating egg whites
 
 ## Ingredients
