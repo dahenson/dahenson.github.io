@@ -1,6 +1,7 @@
 ---
 title: Sourdough Waffles
 layout: default
+go_back: true
 ---
 
 A simple waffle recipe to help make use of your sourdough starter discard.

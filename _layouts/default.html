@@ -4,6 +4,9 @@
   <body>
     {% include header.html %}
     <main>
+      {% if page.go_back %}
+        <a href="{{ page.dir }}">&laquo;&nbsp;go back</a>
+      {% endif %}
       {% if page.title and page.title != "" %}
         <h1>{{ page.title }}</h1>
       {% endif %}

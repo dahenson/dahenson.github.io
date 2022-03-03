@@ -1,6 +1,7 @@
 ---
 title: Butter Chicken
 layout: default
+go_back: true
 ---
 
 This is a simple butter chicken recipe for your slow cooker.
