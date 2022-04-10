@@ -1,5 +1,10 @@
 seen:
-  - title: 3 idiots
+  - title: "#Home"
+    url: https://www.imdb.com/title/tt10534500
+    rating: yah
+    review: A heartwarming, intimate glimpse at life in a modern generational Indian family
+
+  - title: "3 idiots"
     url: https://www.imdb.com/title/tt1187043
     rating: yah
     review: A hard and humorous rememberance of three friends coming of age at university
@@ -50,6 +55,12 @@ watchlist:
 
   - title: Luck by Chance
     url: https://www.imdb.com/title/tt0886539
+
+  - title: PK
+    url: https://www.imdb.com/title/tt2338151
+
+  - title: Soorarai Pottru
+    url: https://www.imdb.com/title/tt10189514
 
   - title: Zindagi Na Millegi Dobara
     url: https://www.imdb.com/title/tt1562872
