@@ -1,0 +1,35 @@
+---
+title: India Movies
+layout: default
+---
+
+<p>
+  I enjoy movies, but I really dig getting into movies that come out of India. There
+  seems to be a lot of variety, which makes it easy for anyone to find something to love.
+</p>
+
+<h2>Seen</h2>
+{% for movie in site.data.india_movies.seen %}
+<div>
+  <h3>
+    <a href="{{ movie.url }}">{{ movie.title }}</a>
+    <span>
+      {% if movie.rating == "meh" %}
+        &#x1f610;
+      {% elsif movie.rating == "nah" %}
+        &#x1f641;
+      {% else %}
+        &#x1f642;
+      {% endif %}
+    </span>
+  </h3>
+  <p>{{ movie.review }}</p>
+</div>
+{% endfor %}
+
+<h2>Watchlist</h2>
+<ul>
+  {% for movie in site.data.india_movies.watchlist %}
+  <li><a href="{{ movie.url }}">{{ movie.title }}</a></li>
+  {% endfor %}
+</ul>
