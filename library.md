@@ -8,10 +8,13 @@ This page serves as a reading log for me to remember the books I’ve read.
 ## 2022
 
 - **Reading**
-  - The Wrong Stars (Axiom #1) by Tim Pratt
-  - The Late Show (Renee Ballard #1) by Michael Connelly
-  - A Hunter-Gatherer's Guide to the 21st Century: Evolution and the challenges of Modern Life by Heather E. Heying, Bret Weinstein
+  - The Aviators by Winston Groom
+  - The Emerald Mile by Kevin Fedarko
+  - Celine by Peter Heller
 - **Finished**
+  - Dragon Teeth by Michael Crichton
+  - The Late Show (Renee Ballard #1) by Michael Connelly
+  - The Wrong Stars (Axiom #1) by Tim Pratt
   - Greenlights by Matthew McConaughey
 
 ## 2021
