@@ -11,7 +11,9 @@ This page serves as a reading log for me to remember the books I’ve read.
   - The Aviators by Winston Groom
   - The Emerald Mile by Kevin Fedarko
   - Celine by Peter Heller
+  - The Hobbit by J.R.R. Tolkien
 - **Finished**
+  - The Echo Wife by Sarah Gailey
   - Dragon Teeth by Michael Crichton
   - The Late Show (Renee Ballard #1) by Michael Connelly
   - The Wrong Stars (Axiom #1) by Tim Pratt
