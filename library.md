@@ -13,6 +13,7 @@ This page serves as a reading log for me to remember the books I’ve read.
   - Celine by Peter Heller
   - The Hobbit by J.R.R. Tolkien
 - **Finished**
+  - All Systems Red (The Murderbot Diaries, #1) by Martha Wells _Re-read_
   - The Echo Wife by Sarah Gailey
   - Dragon Teeth by Michael Crichton
   - The Late Show (Renee Ballard #1) by Michael Connelly
