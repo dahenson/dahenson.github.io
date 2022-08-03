@@ -8,4 +8,5 @@ wiki to store some information I find important or interesting.
 
 I currently have the following sections:
 
-- [Recipes](recipes)
+- [Food](food)
+- [Tech](tech)
