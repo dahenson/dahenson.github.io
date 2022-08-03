@@ -22,3 +22,12 @@ My everyday computer is a basic Lenovo Thinkpad T400:
 - **RAM**: 4GB
 - **Storage**: 64GB SSD
 - **Display**: 14" LCD
+
+I am also rocking a Toshiba Satellite A665D-S6082. Catchy name, right?
+
+- **Operating System**: [Fedora](https://getfedora.org)
+- **CPU**: AMD Phenom II N970
+- **GPU**: AMD Redwood/AMD RS880
+- **RAM**: 8GB
+- **Storage**: 128GB SSD
+- **Display**: 14" LCD
