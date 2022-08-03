@@ -24,6 +24,11 @@ seen:
     rating: yah
     review: A rousing female wrestling movie based on real events!
 
+  - title: Dil Chahta Hai
+    url: https://www.imdb.com/title/tt0292490
+    rating: yah
+    review: A little romance, and a whole lotta bromance in this classic buddy movie
+
   - title: Gully Boy
     url: https://www.imdb.com/title/tt2395469
     rating: yah
@@ -50,14 +55,14 @@ seen:
     review: A man returns to his roots and rediscovers himself in the motherland
 
 watchlist:
-  - title: Dil Chahta Hai
-    url: https://www.imdb.com/title/tt0292490
-
   - title: Luck by Chance
     url: https://www.imdb.com/title/tt0886539
 
   - title: PK
     url: https://www.imdb.com/title/tt2338151
+
+  - title: Rangasthalam 1985
+    url: https://www.imdb.com/title/tt7392212
 
   - title: Soorarai Pottru
     url: https://www.imdb.com/title/tt10189514
