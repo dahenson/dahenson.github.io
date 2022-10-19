@@ -1,6 +1,7 @@
 ---
 title: Swap Caps Lock with Escape
 layout: default
+go_back: true
 ---
 
 I can never seem to remember how to swap caps lock and the escape key in gnome. I don't want

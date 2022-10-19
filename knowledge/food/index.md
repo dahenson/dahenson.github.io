@@ -16,4 +16,6 @@ recipes that are fun to make and enjoyable for our family and our guests.
 
 ## Misc.
 
+Some general knowledge about the food we eat.
+
 - [Sourdough](sourdough)
