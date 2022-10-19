@@ -4,9 +4,22 @@ layout: default
 go_back: true
 ---
 
+These temperatures are for grilling and cooking. Smoking is a whole other story. Always remember
+that the internal temperature of the meat can continue to rise 5-10 degrees after being removed
+from heat.
+
 ## Chicken
 
 Chicken should always be cooked to at least 165℉.
+
+## Pork
+
+Pork should always be cooked to at least 145℉ in order to kill off the bacteria.
+
+- 145℉ - 150℉ (Medium Rare)
+- 150℉ - 155℉ (Medium)
+- 155℉ - 160℉ (Medium Well)
+- 160℉ + (Well Done)
 
 ## Steak / Burgers
 
