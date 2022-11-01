@@ -88,14 +88,3 @@ _Goal: Read 24 books. I barely eeked this out, but I think it’s the most I’v
 - Hobby Hydroponics by Howard M. Resh
 - DIY Hydroponic Gardens by Tyler Baras
 
-## Future?
-
-- **Books I already own**
-  - Dark Age (Red Rising Saga, #5) by Pierce Brown
-  - Dragonquest (Pern: Dragonriders of Pern, #2) by Anne McAffery
-  - The Tombs of Atuan (Earthsea Cycle, #2) by Ursula K. Le Guin
-  - The Children of Blood and Bone (Legacy of Orisha #1) by Tomi Adeyemi
-  - The Journey Home (Wilder Boys #2) by Brandon Wallace
-- **Books I'm Interested To Read**
-  - Wilder Boys (Wilder Boys #1) by Brandon Wallace
-  - Aru Shah and the End of Time (Pandava #1) by Roshani Chokshi
