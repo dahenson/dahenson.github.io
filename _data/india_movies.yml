@@ -12,7 +12,7 @@ seen:
   - title: Barfi!
     url: https://www.imdb.com/title/tt2082197
     rating: yah
-    review: A quirky, fun, and a beautiful love story
+    review: A quirky, fun, and beautiful love story
 
   - title: Chak De! India
     url: https://www.imdb.com/title/tt0871510
@@ -43,6 +43,11 @@ seen:
     url: https://www.imdb.com/title/tt8055888
     rating: yah
     review: A funny and believable superhero story with some Kung Fu funk
+
+  - title: RRR
+    url: https://www.imdb.com/title/tt8178634
+    rating: yah
+    review: If you're down for a period bromance with some visually stunning action, look no further.
 
   - title: Singham
     url: https://www.imdb.com/title/tt1948150
