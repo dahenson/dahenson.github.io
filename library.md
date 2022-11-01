@@ -9,11 +9,11 @@ This page serves as a reading log for me to remember the books I’ve read.
 
 - **Reading**
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
-  - Network Effect (The Murderbot Diaries, #5) by Matha Wells
   - The Aviators by Winston Groom
   - The Emerald Mile by Kevin Fedarko
   - Celine by Peter Heller
 - **Finished**
+  - Network Effect (The Murderbot Diaries, #5) by Matha Wells
   - The Hobbit by J.R.R. Tolkien _Re-read_
   - All Systems Red (The Murderbot Diaries, #1) by Martha Wells _Re-read_
   - The Echo Wife by Sarah Gailey
