@@ -8,11 +8,12 @@ This page serves as a reading log for me to remember the books I’ve read.
 ## 2022
 
 - **Reading**
+  - Adnan's Story by Rabia Chaudry
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
   - The Aviators by Winston Groom
-  - The Emerald Mile by Kevin Fedarko
   - Celine by Peter Heller
 - **Finished**
+  - The Emerald Mile by Kevin Fedarko
   - Network Effect (The Murderbot Diaries, #5) by Matha Wells
   - The Hobbit by J.R.R. Tolkien _Re-read_
   - All Systems Red (The Murderbot Diaries, #1) by Martha Wells _Re-read_
