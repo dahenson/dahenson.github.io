@@ -8,11 +8,13 @@ This page serves as a reading log for me to remember the books I’ve read.
 ## 2022
 
 - **Reading**
-  - Adnan's Story by Rabia Chaudry
+  - The Suitcase Clone by Robin Sloan
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
   - The Aviators by Winston Groom
   - Celine by Peter Heller
 - **Finished**
+  - Deconstructed by Liz Talley
+  - Adnan's Story by Rabia Chaudry
   - The Emerald Mile by Kevin Fedarko
   - Network Effect (The Murderbot Diaries, #5) by Matha Wells
   - The Hobbit by J.R.R. Tolkien _Re-read_
