@@ -10,9 +10,9 @@ This page serves as a reading log for me to remember the books I’ve read.
 - **Reading**
   - The Suitcase Clone by Robin Sloan
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
-  - The Aviators by Winston Groom
   - Celine by Peter Heller
 - **Finished**
+  - The Aviators by Winston Groom
   - Deconstructed by Liz Talley
   - Adnan's Story by Rabia Chaudry
   - The Emerald Mile by Kevin Fedarko
