@@ -1,29 +1,35 @@
 ---
 title: Library
 layout: default
+permalink: /library/
 ---
 
 This page serves as a reading log for me to remember the books I’ve read.
 
-## 2022
+## 2023
 
 - **Reading**
-  - The Suitcase Clone by Robin Sloan
+  - For We Are Many (Bobiverse, #2) by Dennis E. Taylor
+  - Black Beauty by Anna Sewell
+  - A Rip Through Time by Kelley Armstrong
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
-  - Celine by Peter Heller
-- **Finished**
-  - The Aviators by Winston Groom
-  - Deconstructed by Liz Talley
-  - Adnan's Story by Rabia Chaudry
-  - The Emerald Mile by Kevin Fedarko
-  - Network Effect (The Murderbot Diaries, #5) by Matha Wells
-  - The Hobbit by J.R.R. Tolkien _Re-read_
-  - All Systems Red (The Murderbot Diaries, #1) by Martha Wells _Re-read_
-  - The Echo Wife by Sarah Gailey
-  - Dragon Teeth by Michael Crichton
-  - The Late Show (Renee Ballard #1) by Michael Connelly
-  - The Wrong Stars (Axiom #1) by Tim Pratt
-  - Greenlights by Matthew McConaughey
+  - Mere Christianity by CS Lewis
+
+## 2022
+
+- The Suitcase Clone by Robin Sloan
+- The Aviators by Winston Groom
+- Deconstructed by Liz Talley
+- Adnan's Story by Rabia Chaudry
+- The Emerald Mile by Kevin Fedarko
+- Network Effect (The Murderbot Diaries, #5) by Matha Wells
+- The Hobbit by J.R.R. Tolkien _Re-read_
+- All Systems Red (The Murderbot Diaries, #1) by Martha Wells _Re-read_
+- The Echo Wife by Sarah Gailey
+- Dragon Teeth by Michael Crichton
+- The Late Show (Renee Ballard #1) by Michael Connelly
+- The Wrong Stars (Axiom #1) by Tim Pratt
+- Greenlights by Matthew McConaughey
 
 ## 2021
 
