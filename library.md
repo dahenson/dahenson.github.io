@@ -4,16 +4,18 @@ layout: default
 permalink: /library/
 ---
 
-This page serves as a reading log for me to remember the books I’ve read.
+This is my reading log.
 
 ## 2023
 
 - **Reading**
+  - If You Ask Me by Libby Hubscher
   - For We Are Many (Bobiverse, #2) by Dennis E. Taylor
-  - Black Beauty by Anna Sewell
-  - A Rip Through Time by Kelley Armstrong
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
   - Mere Christianity by CS Lewis
+- **Finished**
+  - Black Beauty by Anna Sewell
+  - A Rip Through Time by Kelley Armstrong
 
 ## 2022
 
