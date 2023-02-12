@@ -20,9 +20,7 @@
 
 title: Brain of Dane
 email: thegreatdane@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My personal "digital garden". This is mostly for personal reference,
-  but others might find some of the information useful too.
+description: A collection of thoughts from one man's brain.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://brainofdane.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:categories/:year-:month-:day-:title:output_ext

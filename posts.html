@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<section>
+  <!-- Post list -->
+  {% for post in site.posts %}
+  <ul>
+    <li>[ {{ post.date | date_to_string }} ] - <a href="{{ post.url }}" aria-label="Link to post">{{ post.title }}</a></li>
+  </ul>
+  {% endfor %}
+</section>

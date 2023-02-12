@@ -1,6 +1,7 @@
 ---
 title: Knowledge
 layout: default
+permalink: knowledge
 ---
 
 This is my little digital garden on the web. It serves as a sort of personal
