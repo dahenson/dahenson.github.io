@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "postmarketOS Plaque"
+permalink: /postmarket-os-plaque/
 ---
 
 I spent a little bit of time the other evening on a little 3D Printing project
