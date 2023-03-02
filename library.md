@@ -9,11 +9,11 @@ This is my reading log.
 ## 2023
 
 - **Reading**
-  - If You Ask Me by Libby Hubscher
   - For We Are Many (Bobiverse, #2) by Dennis E. Taylor
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
   - Mere Christianity by CS Lewis
 - **Finished**
+  - If You Ask Me by Libby Hubscher
   - Black Beauty by Anna Sewell
   - A Rip Through Time by Kelley Armstrong
 
