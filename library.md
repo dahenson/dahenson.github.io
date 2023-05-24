@@ -9,12 +9,12 @@ This is my reading log.
 ## 2023
 
 - **Reading**
-  - The Paris Apartment by Lucy Foley
   - A Deadly Education (The Scholomance #1) by Naomi Novak
   - Code Craft by Pete Goodliffe
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
   - Mere Christianity by CS Lewis
 - **Finished**
+  - The Paris Apartment by Lucy Foley
   - For We Are Many (Bobiverse, #2) by Dennis E. Taylor
   - Take My Hand by Dolen Perkins-Valdez
   - Come Fly The World by Julia Cooke
