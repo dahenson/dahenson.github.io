@@ -9,11 +9,12 @@ This is my reading log.
 ## 2023
 
 - **Reading**
-  - A Deadly Education (The Scholomance #1) by Naomi Novak
+  - Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin
   - Code Craft by Pete Goodliffe
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
   - Mere Christianity by CS Lewis
 - **Finished**
+  - A Deadly Education (The Scholomance #1) by Naomi Novak
   - The Paris Apartment by Lucy Foley
   - For We Are Many (Bobiverse, #2) by Dennis E. Taylor
   - Take My Hand by Dolen Perkins-Valdez
