@@ -1,5 +1,5 @@
 ---
-title: India Movies
+title: Indian Cinema
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 </p>
 
 <h2>Seen</h2>
-{% for movie in site.data.india_movies.seen %}
+{% for movie in site.data.indian_cinema.seen %}
 <div>
   <p>
     <a href="{{ movie.url }}">{{ movie.title }}</a>
@@ -29,7 +29,7 @@ layout: default
 
 <h2>Watchlist</h2>
 <ul>
-  {% for movie in site.data.india_movies.watchlist %}
+  {% for movie in site.data.indian_cinema.watchlist %}
   <li><a href="{{ movie.url }}">{{ movie.title }}</a></li>
   {% endfor %}
 </ul>
