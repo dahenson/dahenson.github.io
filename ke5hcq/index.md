@@ -11,7 +11,11 @@ activities in the future.
 
 ## Equipment
 
+![An illuminated Baofeng UV-5R+ handheld radio held in one hand against the night sky](/assets/images/baofeng.webp)
+
 The only equipment I have is the now classic entry-level Baofeng UV-5R+ handheld.
 I replaced the rubber ducky with a Nagoya NA-701 whip. I use it to talk on the
 local repeaters and check in on the weekly net. I occasionally stand outside
-and listen to the satellites as they fly by, and I hope to talk on one someday.
+and listen to the satellites as they fly by, and I hope to talk to other hams
+through a satellite someday.
+
