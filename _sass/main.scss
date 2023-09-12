@@ -1,13 +1,13 @@
 $font-stack: sans-serif;
-$primary-color-bg: #010B14;
-$primary-color-fg: #FDFFFC;
+$black: #010B14;
+$white: #FDFFFC;
 $red: #EB4511;
 $yellow: #FCCA46;
 
 html {
   font-family: $font-stack;
-  background-color: $primary-color-bg;
-  color: $primary-color-fg;
+  background-color: $black;
+  color: $white;
 }
 
 body {
@@ -15,16 +15,42 @@ body {
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.5em;
+
+  header {
+    margin: 0em 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 0.25em solid;
+  }
+
+  main {
+    margin: 0em 1.5em;
+  }
+
   p {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
   }
+
   a {
     color: $red;
     text-decoration: none;
   }
+
   a:hover {
     color: $yellow;
     text-decoration: underline;
+  }
+
+  footer {
+    font-size: 12px;
+    margin: 0em 1.5em 1.5em;
+    padding-top: 1em;
+    border-top: 0.25em solid;
+  }
+
+  img {
+    border-radius: 0.5em;
+    max-width: 100%;
+    height: auto;
   }
 }
