@@ -9,11 +9,12 @@ This is my reading log.
 ## 2023
 
 - **Reading**
-  - Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin
+  - The Last Graduate by Naomi Novik
   - Code Craft by Pete Goodliffe
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
-  - Mere Christianity by CS Lewis
 - **Finished**
+  - Everyone Here is Lying by Shari Lapena
+  - Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin
   - A Deadly Education (The Scholomance #1) by Naomi Novak
   - The Paris Apartment by Lucy Foley
   - For We Are Many (Bobiverse, #2) by Dennis E. Taylor
