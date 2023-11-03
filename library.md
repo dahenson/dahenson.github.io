@@ -13,6 +13,7 @@ This is my reading log.
   - The Ballad of Songbirds and Snakes by Suzanne Collins
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
 - **Finished**
+  - Everyone Here is Lying by Shari Lapena
   - Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin
   - A Deadly Education (The Scholomance #1) by Naomi Novak
   - The Paris Apartment by Lucy Foley
