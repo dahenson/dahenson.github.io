@@ -9,10 +9,12 @@ This is my reading log.
 ## 2023
 
 - **Reading**
-  - The Last Graduate (The Scholomance #1) by Naomi Novak
+  - Iron Flame by Rebecca Yarros
   - The Ballad of Songbirds and Snakes by Suzanne Collins
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
 - **Finished**
+  - The Fourth Wing by Rebecca Yarros
+  - The Last Graduate (The Scholomance #2) by Naomi Novak
   - Everyone Here is Lying by Shari Lapena
   - Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin
   - A Deadly Education (The Scholomance #1) by Naomi Novak
