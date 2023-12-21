@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "postmarketOS Plaque"
-permalink: /postmarket-os-plaque/
+permalink: /postmarket-os-plaque
 ---
 
 I spent a little bit of time the other evening on a little 3D Printing project
@@ -18,9 +18,9 @@ in which the creator Scott Yu-Jan is customizing his 3D Printer and he says:
 >
 > -- <cite>Scott Yu-Jan</cite>
 
-He then proceeds to spray paint the parts of the printer that are branded to obscure the logo.
-Well, I wasn't about to spray paint the nice little black box so I figured I
-could at least "re-brand".
+He then proceeds to spray paint the parts of the printer that are branded to
+obscure the logo. Well, I wasn't about to spray paint the nice little black box
+so I figured I could at least "re-brand".
 
 My OpenSCAD and FreeCAD skills are still lacking, so I knocked this one out in
 Sketchup. The logo is (sort of) free-handed, and may not be exactly right. To
@@ -35,6 +35,8 @@ I don't have a darker green, but I think the muted colors look nice.
 
 ![Picture of the 3D printed postmarket plaque on top of the computer case](/assets/images/aopen_chromebox_postmarketos_plaque.jpg)
 
-If this looks interesting to you, you're more than welcome to download it, print it, and mess with it. If you do anything with it, feel free to reach out to me and let me know! I would love to know how you use it.
+If this looks interesting to you, you're more than welcome to download it,
+print it, and mess with it. If you do anything with it, feel free to reach out
+to me and let me know! I would love to know how you use it.
 
 [Download postmarketos_plaque.stl](/assets/downloads/postmarketos_plaque.stl)
