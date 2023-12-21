@@ -9,10 +9,11 @@ This is my reading log.
 ## 2023
 
 - **Reading**
-  - Iron Flame by Rebecca Yarros
+  - Howl's Moving Castle by Diana Wynne Jones
   - The Ballad of Songbirds and Snakes by Suzanne Collins
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
 - **Finished**
+  - Iron Flame by Rebecca Yarros
   - The Fourth Wing by Rebecca Yarros
   - The Last Graduate (The Scholomance #2) by Naomi Novak
   - Everyone Here is Lying by Shari Lapena
