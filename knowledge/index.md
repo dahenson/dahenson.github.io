@@ -9,5 +9,5 @@ wiki to store some information I find important or interesting.
 
 I currently have the following sections:
 
-- [Food](knowledge/food)
-- [Tech](knowledge/tech)
+- [Food](/knowledge/food)
+- [Tech](/knowledge/tech)
