@@ -6,26 +6,30 @@ permalink: /library/
 
 This is my reading log.
 
-## 2023
+## 2024
 
 - **Reading**
-  - Howl's Moving Castle by Diana Wynne Jones
+  - Witch King by Martha Wells
+  - Zero Days by Ruth Ware
   - The Ballad of Songbirds and Snakes by Suzanne Collins
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
-- **Finished**
-  - Iron Flame by Rebecca Yarros
-  - The Fourth Wing by Rebecca Yarros
-  - The Last Graduate (The Scholomance #2) by Naomi Novak
-  - Everyone Here is Lying by Shari Lapena
-  - Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin
-  - A Deadly Education (The Scholomance #1) by Naomi Novak
-  - The Paris Apartment by Lucy Foley
-  - For We Are Many (Bobiverse, #2) by Dennis E. Taylor
-  - Take My Hand by Dolen Perkins-Valdez
-  - Come Fly The World by Julia Cooke
-  - If You Ask Me by Libby Hubscher
-  - Black Beauty by Anna Sewell
-  - A Rip Through Time by Kelley Armstrong
+
+## 2023
+
+- Howl's Moving Castle by Diana Wynne Jones
+- Iron Flame by Rebecca Yarros
+- The Fourth Wing by Rebecca Yarros
+- The Last Graduate (The Scholomance #2) by Naomi Novak
+- Everyone Here is Lying by Shari Lapena
+- Tomorrow and Tomorrow and Tomorrow by Gabrielle Zevin
+- A Deadly Education (The Scholomance #1) by Naomi Novak
+- The Paris Apartment by Lucy Foley
+- For We Are Many (Bobiverse, #2) by Dennis E. Taylor
+- Take My Hand by Dolen Perkins-Valdez
+- Come Fly The World by Julia Cooke
+- If You Ask Me by Libby Hubscher
+- Black Beauty by Anna Sewell
+- A Rip Through Time by Kelley Armstrong
 
 ## 2022
 
