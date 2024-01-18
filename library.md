@@ -9,10 +9,12 @@ This is my reading log.
 ## 2024
 
 - **Reading**
+  - Anne of Green Gables by Lucy Maud Montgomery
   - Witch King by Martha Wells
-  - Zero Days by Ruth Ware
   - The Ballad of Songbirds and Snakes by Suzanne Collins
   - The Lord of the Rings: The Fellowship of the Ring by J.R.R. Tolkien _Re-read_
+- **Finished**
+  - Zero Days by Ruth Ware
 
 ## 2023
 
