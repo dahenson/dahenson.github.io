@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Brain of Dane</title>
-    <meta name="description" content="Blog Posts - Brain of Dane">
+    <title>Brain of Dane - Swap Caps Lock with Escape</title>
+    <meta name="description" content="My Personal Blog">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,20 +19,16 @@
       </nav>
     </header>
     <main>
+      <a href="/knowledge/tech/">&laquo;&nbsp;go back</a>
+      <h2>Swap Caps Lock with Escape</h2>
       <section>
-        <section class="post-list">
-          <!-- Post list -->
-          <div>
-            <h3>
-              21 Dec 2023 | <a href="/mega-tron-build-part-1" aria-label="Link to post">Mega Tron i3 Build Part 1</a>
-            </h3>
-          </div>
-          <div>
-            <h3>
-              27 Jan 2023 | <a href="/postmarket-os-plaque" aria-label="Link to post">postmarketOS Plaque</a>
-            </h3>
-          </div>
-        </section>
+        <p>
+          I can never seem to remember how to swap caps lock and the escape key in gnome. I don’t want
+          gnome tweaks, and there doesn’t seem to be a switch in the GUI. elementary OS got this right…
+          but I digress.
+        </p>
+        <p>The secret incantation for your terminal goes like this:</p>
+        <p><code class="language-plaintext highlighter-rouge">gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"</code></p>
       </section>
     </main>
     <footer>
