@@ -1,71 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home - Brain of Dane</title>
+{% render 'header', title: "Home" %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="me" href="https://hachyderm.io/@brainofdane">
-  </head>
+<section id="introduction">
+  <p><strong>Hi, I’m Dane!</strong></p>
+  <p>
+    I am a software engineer in Granbury, Texas. I enjoy working hard, learning
+    new technology, and applying my skills to improve the world around me. I am
+    passionate about helping people, loving people, and helping people love
+    others.
+  </p>
+  <p>
+    My current employer is <a href="https://ridecomoto.com">Comoto Holdings</a> where I
+    work as a software engineer.<br />
+    My most recent work experience has involved Ruby, Elixir, and some Javascript/Typescript.
+    However, I enjoy finding and learning the right tool for the job.
+  </p>
+  <p>
+    I have dabbled in Go, Elm, Ada, C, Lua, and other languages of interest over the years in
+    order to sharpen my skills and gain understanding for how different systems are built.<br />
+    If you or somebody you know has need of a curious, thoughtful, and hard working engineer
+    like me, feel free to ping me on <a href="https://www.linkedin.com/in/dane-henson/">LinkedIn</a>.
+    You can find me organizing some bits on <a href="https://github.com/dahenson">github</a>.<br />
+    You can connect with me on <a href="https://hachyderm.io/@brainofdane">mastodon</a>.
+  </p>
+  <p>
+    On a more personal note, I like to <a href="/library">read books</a>
+    and watch <a href="/indian-cinema">indian cinema</a>. I have been a licensed
+    amateur radio operator since 2006. My call is <a href="/ke5hcq">KE5HCQ</a>, and I occasionally enjoy
+    finding interesting things to do with radios.
+  </p>
+</section>
 
-  <body>
+<hr />
 
-    <header>
-      <h1>Brain of Dane</h1>
-    </header>
+<section id="navigation">
+  <h3>Knowledge</h3>
+  <ul>
+    <li><a href="/ke5hcq">Amateur radio</a></li>
+  </ul>
 
-    <main>
-      <section id="introduction">
-        <p><strong>Hi, I’m Dane!</strong></p>
-        <p>
-          I am a software engineer in Granbury, Texas. I enjoy working hard, learning
-          new technology, and applying my skills to improve the world around me. I am
-          passionate about helping people, loving people, and helping people love
-          others.
-        </p>
-        <p>
-          My most recent employer was <a href="https://dscout.com">dscout</a> where I
-          worked as a software engineer.<br />
-          My most recent work experience involved Ruby, Elixir, and some Javascript/Typescript
-          in the form of ReactJS. However, I enjoy finding and learning the right tool for the job.
-          I have dabbled in Go, Elm, Ada, C, Lua, and other languages of interest over the years in
-          order to sharpen my skills and gain understanding for how different systems are built.<br />
-          If you or somebody you know has need of a curious, thoughtful, and hard working engineer
-          like me, feel free to ping me on <a href="https://www.linkedin.com/in/dane-henson/">LinkedIn</a>.
-          You can find me organizing some bits on <a href="https://github.com/dahenson">github</a>.<br />
-          You can connect with me on <a href="https://hachyderm.io/@brainofdane">mastodon</a>.
-        </p>
-        <p>
-          On a more personal note, I like to <a href="/library.html">read books</a>
-          and watch <a href="/indian-cinema.html">indian cinema</a>. I have been a licensed
-          amateur radio operator since 2006. My call is  <a href="/ke5hcq.html">KE5HCQ</a>, and I occasionally enjoy
-          finding interesting things to do with radios.
-        </p>
-      </section>
+  <h3>Media</h3>
+  <ul>
+    <li><a href="/library">Reading log</a></li>
+    <li><a href="/indian-cinema">Indian cinema</a></li>
+  </ul>
 
-      <hr />
+  <h3>Miscellaneous</h3>
+  <ul>
+    <li><a href="/bookmarks">Bookmarks</a></li>
+  </ul>
+</section>
 
-      <section id="navigation">
-        <h3>Knowledge</h3>
-        <ul>
-          <li><a href="/ke5hcq.html">Amateur radio</a></li>
-        </ul>
-
-        <h3>Media</h3>
-        <ul>
-          <li><a href="/library.html">Reading log</a></li>
-          <li><a href="/indian-cinema.html">Indian cinema</a></li>
-        </ul>
-
-        <h3>Miscellaneous</h3>
-        <ul>
-          <li><a href="/bookmarks.html">Bookmarks</a></li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      All content licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise specified
-    </footer>
-  </body>
-</html>
+{% render 'footer' %}
