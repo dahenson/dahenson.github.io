@@ -1,6 +1,6 @@
-{% render 'header', title: "Indian Cinema" %}
-
-<h2>Indian Cinema</h2>
+{% layout 'base', title: 'Indian Cinema' %}
+{% block content %}
+<h2>{{ title }}</h2>
 <section>
   <p>
     I enjoy movies, but I really dig getting into Indian cinema. There is a lot of variety, which makes it easy for
@@ -75,12 +75,12 @@
   </div>
 
   <div>
-  <p>
-    <a href="https://www.imdb.com/title/tt2395469">Gully Boy</a>
-    <span>&#x1f642;</span>
-  </p>
-  <p>Hip Hop fan overcomes social/religious/caste issues to become a Hip Hop star</p>
-</div>
+    <p>
+      <a href="https://www.imdb.com/title/tt2395469">Gully Boy</a>
+      <span>&#x1f642;</span>
+    </p>
+    <p>Hip Hop fan overcomes social/religious/caste issues to become a Hip Hop star</p>
+  </div>
 
   <div>
     <p>
@@ -200,5 +200,4 @@
     <li><a href="https://www.imdb.com/title/tt1562872">Zindagi Na Millegi Dobara</a></li>
   </ul>
 </section>
-
-{% render 'footer' %}
+{% endblock %}

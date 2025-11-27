@@ -1,27 +1,26 @@
-{% render 'header', title: "Home" %}
-
+{% layout 'base', title: 'Home' %}
+{% block content %}
 <section id="introduction">
-  <p><strong>Hi, I’m Dane!</strong></p>
   <p>
-    I am a software engineer in Granbury, Texas. I enjoy working hard, learning
-    new technology, and applying my skills to improve the world around me. I am
-    passionate about helping people, loving people, and helping people love
-    others.
+    Hi, I'm Dane! I am a software engineer in Granbury, Texas. I enjoy working hard, learning
+    new technology, and applying my skills to improve the world around me.
   </p>
+  <h2>Work</h2>
   <p>
     My current employer is <a href="https://ridecomoto.com">Comoto Holdings</a> where I
-    work as a software engineer.<br />
+    work as a software engineer.
     My most recent work experience has involved Ruby, Elixir, and some Javascript/Typescript.
     However, I enjoy finding and learning the right tool for the job.
   </p>
   <p>
     I have dabbled in Go, Elm, Ada, C, Lua, and other languages of interest over the years in
-    order to sharpen my skills and gain understanding for how different systems are built.<br />
+    order to sharpen my skills and gain understanding for how different systems are built.
     If you or somebody you know has need of a curious, thoughtful, and hard working engineer
     like me, feel free to ping me on <a href="https://www.linkedin.com/in/dane-henson/">LinkedIn</a>.
-    You can find me organizing some bits on <a href="https://github.com/dahenson">github</a>.<br />
+    You can find me organizing some bits on <a href="https://github.com/dahenson">github</a>.
     You can connect with me on <a href="https://hachyderm.io/@brainofdane">mastodon</a>.
   </p>
+  <h2>Personal</h2>
   <p>
     On a more personal note, I like to <a href="/library">read books</a>
     and watch <a href="/indian-cinema">indian cinema</a>. I have been a licensed
@@ -49,5 +48,4 @@
     <li><a href="/bookmarks">Bookmarks</a></li>
   </ul>
 </section>
-
-{% render 'footer' %}
+{% endblock %}

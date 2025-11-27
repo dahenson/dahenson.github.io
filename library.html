@@ -1,5 +1,5 @@
-{% render 'header', title: "Library" %}
-
+{% layout 'base', title: 'Library' %}
+{% block content %}
 <h2>Library</h2>
 <section>
   <p>This is my reading log.</p>
@@ -7,7 +7,8 @@
   <ul>
     <li><strong>Reading</strong>
       <ul>
-        <li>Network Effect (The Murderbot Diaries #5) by Martha Wells (Re-read)</li>
+        <li>Saltcrop by Yume Kitasei</li>
+        <li>Night Owl: A Trasker Thriller by Andrew Mayne</li>
         <li>The Bible Says So by Dan McClellan</li>
         <li>Leviathan Wakes by James S.A. Corey</li>
         <li>Think Again by Adam Grant</li>
@@ -15,6 +16,8 @@
     </li>
     <li><strong>Finished</strong>
       <ul>
+        <li>Hemlock &amp; Silver by T. Kingfisher</li>
+        <li>Network Effect (The Murderbot Diaries #5) by Martha Wells (Re-read)</li>
         <li>We Solve Murders by Richard Osman</li>
         <li>Carl's Doomsday Scenario by Matt Dinniman</li>
         <li>The Girls in the Stilt House by Kelly Mustian</li>
@@ -166,5 +169,4 @@
     <li>DIY Hydroponic Gardens by Tyler Baras</li>
   </ul>
 </section>
-
-{% render 'footer' %}
+{% endblock %}

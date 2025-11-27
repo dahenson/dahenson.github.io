@@ -1,5 +1,5 @@
-{% render 'header', title: "KE5HCQ" %}
-
+{% layout 'base', title: 'KE5HCQ' %}
+{% block content %}
 <h2>KE5HCQ</h2>
 <section>
   <p>
@@ -10,7 +10,8 @@
   </p>
 
   <h2 id="equipment">Equipment</h2>
-  <p><img src="/ke5hcq/assets/images/baofeng.webp" alt="An illuminated Baofeng UV-5R+ handheld radio held in one hand against the night sky" /></p>
+  <p><img src="/ke5hcq/assets/images/baofeng.webp"
+      alt="An illuminated Baofeng UV-5R+ handheld radio held in one hand against the night sky" /></p>
   <h3>Baofeng UV-5R+</h4>
     <p>
       The first radio I ever owned was the now classic entry-level Baofeng UV-5R+
@@ -36,7 +37,8 @@
     <p>
       I hope to make my own tone module for both of these radios so that I can use
       them as base stations for talking on the local repeaters. <a href="https://zl2pd.com/">Andrew (ZL2PD)</a>
-      has designed and published some novel <a href="https://zl2pd.com/CML_PW_50tone_CTCSS_Encoder.html">CTCSS encoder circuits</a>
+      has designed and published some novel <a href="https://zl2pd.com/CML_PW_50tone_CTCSS_Encoder.html">CTCSS encoder
+        circuits</a>
       for use with radios like this, and I can't wait to build one myself.
     </p>
 </section>
@@ -46,5 +48,4 @@
     <li><a href="https://www.qrz.com/db/KE5HCQ">My QRZ Profile</a></li>
   </ul>
 </section>
-
-{% render 'footer' %}
+{% endblock %}
