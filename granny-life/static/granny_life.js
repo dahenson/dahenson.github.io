@@ -2318,6 +2318,9 @@ function for$(id) {
 function name(element_name) {
   return attribute2("name", element_name);
 }
+function placeholder(text) {
+  return attribute2("placeholder", text);
+}
 function value(control_value) {
   return attribute2("value", control_value);
 }
@@ -5058,9 +5061,9 @@ var virtualise = (root2) => {
   if (children.length === 1) {
     return children[0][1];
   }
-  const placeholder = globalThis.document.createTextNode("");
-  insertMetadataChild(text_kind, rootMeta, placeholder, 0, null);
-  root2.insertBefore(placeholder, root2.firstChild);
+  const placeholder2 = globalThis.document.createTextNode("");
+  insertMetadataChild(text_kind, rootMeta, placeholder2, 0, null);
+  root2.insertBefore(placeholder2, root2.firstChild);
   return none2();
 };
 var virtualiseChild = (meta2, domParent, child2, index4) => {
@@ -6173,10 +6176,7 @@ function process_generation_form(loop$fields) {
   }
 }
 function button2(text4, message) {
-  return button(toList([
-    class$("flex-1 p-2 m-2 border-2 rounded-sm bg-sky-500 border-sky-400"),
-    on_click(message)
-  ]), toList([text3(text4)]));
+  return button(toList([on_click(message)]), toList([text3(text4)]));
 }
 function color_class(color) {
   if (color instanceof Red) {
@@ -6317,8 +6317,13 @@ function view(model) {
       class$("generation-jump-form"),
       autocomplete("off")
     ]), toList([
-      label(toList([for$("generation")]), toList([text3("Jump to generation:")])),
-      input(toList([name("generation"), value("")])),
+      label(toList([for$("generation")]), toList([text3("Generation:")])),
+      input(toList([
+        attribute2("type", "number"),
+        placeholder(generation),
+        name("generation"),
+        value("")
+      ])),
       button(List$Empty$const, toList([text3("Go")]))
     ])),
     footer(toList([class$("p-2 m-2 text-center text-slate-500")]), toList([
