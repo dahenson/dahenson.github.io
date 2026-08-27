@@ -2318,11 +2318,11 @@ function for$(id) {
 function name(element_name) {
   return attribute2("name", element_name);
 }
-function placeholder(text) {
-  return attribute2("placeholder", text);
-}
 function value(control_value) {
   return attribute2("value", control_value);
+}
+function role(name2) {
+  return attribute2("role", name2);
 }
 
 // build/dev/javascript/lustre/lustre/effect.mjs
@@ -2627,8 +2627,14 @@ function main(attrs, children) {
 function div(attrs, children) {
   return element2("div", attrs, children);
 }
+function p(attrs, children) {
+  return element2("p", attrs, children);
+}
 function a(attrs, children) {
   return element2("a", attrs, children);
+}
+function span(attrs, children) {
+  return element2("span", attrs, children);
 }
 function svg(attrs, children) {
   return namespaced("http://www.w3.org/2000/svg", "svg", attrs, children);
@@ -5061,9 +5067,9 @@ var virtualise = (root2) => {
   if (children.length === 1) {
     return children[0][1];
   }
-  const placeholder2 = globalThis.document.createTextNode("");
-  insertMetadataChild(text_kind, rootMeta, placeholder2, 0, null);
-  root2.insertBefore(placeholder2, root2.firstChild);
+  const placeholder = globalThis.document.createTextNode("");
+  insertMetadataChild(text_kind, rootMeta, placeholder, 0, null);
+  root2.insertBefore(placeholder, root2.firstChild);
   return none2();
 };
 var virtualiseChild = (meta2, domParent, child2, index4) => {
@@ -5643,6 +5649,9 @@ function start4(app, selector, arguments$) {
 
 // build/dev/javascript/lustre/lustre/element/svg.mjs
 var namespace = "http://www.w3.org/2000/svg";
+function circle(attrs) {
+  return namespaced(namespace, "circle", attrs, empty_list);
+}
 function line(attrs) {
   return namespaced(namespace, "line", attrs, empty_list);
 }
@@ -6048,7 +6057,7 @@ function nth_generation(loop$current_gen, loop$n) {
     let current_gen = loop$current_gen;
     let n = loop$n;
     let n$1 = n;
-    if (n$1 <= 0) {
+    if (n$1 < 1) {
       return current_gen;
     } else {
       let n$12 = n;
@@ -6063,44 +6072,21 @@ function nth_generation(loop$current_gen, loop$n) {
 // build/dev/javascript/granny_life/granny_life.mjs
 var FILEPATH = "src/granny_life.gleam";
 
-class Model extends CustomType {
-  constructor(generation, quadrant, color) {
-    super();
-    this.generation = generation;
-    this.quadrant = quadrant;
-    this.color = color;
-  }
+class North extends CustomType {
 }
+var CellDirection$North$const = new North;
 
-class UserClickedNextGen extends CustomType {
+class South extends CustomType {
 }
-var Message$UserClickedNextGen$const = new UserClickedNextGen;
+var CellDirection$South$const = new South;
 
-class UserClickedPreviousGen extends CustomType {
+class East extends CustomType {
 }
-var Message$UserClickedPreviousGen$const = new UserClickedPreviousGen;
+var CellDirection$East$const = new East;
 
-class UserClickedResetGen extends CustomType {
+class West extends CustomType {
 }
-var Message$UserClickedResetGen$const = new UserClickedResetGen;
-
-class UserRequestedInvalidGen extends CustomType {
-}
-var Message$UserRequestedInvalidGen$const = new UserRequestedInvalidGen;
-
-class UserRequestedNewGen extends CustomType {
-  constructor($0) {
-    super();
-    this[0] = $0;
-  }
-}
-
-class UserSelectedColor extends CustomType {
-  constructor($0) {
-    super();
-    this[0] = $0;
-  }
-}
+var CellDirection$West$const = new West;
 
 class Red extends CustomType {
 }
@@ -6134,25 +6120,109 @@ class Pink extends CustomType {
 }
 var Color$Pink$const = new Pink;
 
-class North extends CustomType {
+class UserClickedNextGen extends CustomType {
 }
-var CellDirection$North$const = new North;
+var Message$UserClickedNextGen$const = new UserClickedNextGen;
 
-class South extends CustomType {
+class UserClickedNextRound extends CustomType {
 }
-var CellDirection$South$const = new South;
+var Message$UserClickedNextRound$const = new UserClickedNextRound;
 
-class East extends CustomType {
+class UserClickedPreviousGen extends CustomType {
 }
-var CellDirection$East$const = new East;
+var Message$UserClickedPreviousGen$const = new UserClickedPreviousGen;
 
-class West extends CustomType {
+class UserClickedPreviousRound extends CustomType {
 }
-var CellDirection$West$const = new West;
+var Message$UserClickedPreviousRound$const = new UserClickedPreviousRound;
+
+class UserClickedResetGen extends CustomType {
+}
+var Message$UserClickedResetGen$const = new UserClickedResetGen;
+
+class UserToggledFocusMode extends CustomType {
+  constructor($0) {
+    super();
+    this[0] = $0;
+  }
+}
+
+class UserRequestedInvalidGen extends CustomType {
+}
+var Message$UserRequestedInvalidGen$const = new UserRequestedInvalidGen;
+
+class UserRequestedNewGen extends CustomType {
+  constructor($0) {
+    super();
+    this[0] = $0;
+  }
+}
+
+class UserSelectedColor extends CustomType {
+  constructor($0) {
+    super();
+    this[0] = $0;
+  }
+}
+
+class Model extends CustomType {
+  constructor(color, focus_mode, focus_round, generation, quadrant) {
+    super();
+    this.color = color;
+    this.focus_mode = focus_mode;
+    this.focus_round = focus_round;
+    this.generation = generation;
+    this.quadrant = quadrant;
+  }
+}
 var cell_height = 20;
 var cell_width = 10;
 var half_cell_width = 5;
-function process_generation_form(loop$fields) {
+function focus_switch(focus_mode) {
+  return button(toList([
+    on_click(new UserToggledFocusMode(!focus_mode)),
+    class$("switch"),
+    attribute2("type", "button"),
+    role("switch")
+  ]), toList([
+    span(toList([class$("label")]), toList([text3("Focus")])),
+    svg(toList([
+      class$("toggle"),
+      attribute2("viewBox", "0 0 64 32")
+    ]), toList([
+      rect(toList([
+        class$("outer-toggle"),
+        attribute2("x", "0"),
+        attribute2("y", "0"),
+        attribute2("rx", "16"),
+        width(64),
+        height(32)
+      ])),
+      (() => {
+        if (focus_mode) {
+          return circle(toList([
+            class$("inner-toggle on"),
+            attribute2("cx", "48"),
+            attribute2("cy", "16"),
+            attribute2("r", "12"),
+            width(28),
+            height(28)
+          ]));
+        } else {
+          return circle(toList([
+            class$("inner-toggle off"),
+            attribute2("cx", "16"),
+            attribute2("cy", "16"),
+            attribute2("r", "12"),
+            width(28),
+            height(28)
+          ]));
+        }
+      })()
+    ]))
+  ]));
+}
+function handle_generation_form_submit(loop$fields) {
   while (true) {
     let fields = loop$fields;
     if (fields instanceof Empty) {
@@ -6177,6 +6247,43 @@ function process_generation_form(loop$fields) {
 }
 function button2(text4, message) {
   return button(toList([on_click(message)]), toList([text3(text4)]));
+}
+function generation_navigation() {
+  return div(List$Empty$const, toList([
+    div(toList([class$("generation-nav")]), toList([
+      button2("Previous", Message$UserClickedPreviousGen$const),
+      button2("Reset", Message$UserClickedResetGen$const),
+      button2("Next", Message$UserClickedNextGen$const)
+    ])),
+    form(toList([
+      on_submit(handle_generation_form_submit),
+      class$("generation-jump-form"),
+      autocomplete("off")
+    ]), toList([
+      label(toList([for$("generation")]), toList([text3("Generation:")])),
+      input(toList([
+        attribute2("type", "number"),
+        name("generation"),
+        value("")
+      ])),
+      button(List$Empty$const, toList([text3("Go")]))
+    ]))
+  ]));
+}
+function stat_box(title, content) {
+  return div(toList([class$("stat-box")]), prepend(div(toList([class$("title")]), toList([text3(title)])), content));
+}
+function focus_navigation(focus_round) {
+  let round3 = to_string(focus_round);
+  return div(List$Empty$const, toList([
+    div(toList([class$("focus-nav")]), toList([
+      button2("Previous", Message$UserClickedPreviousRound$const),
+      stat_box("Crochet round", toList([
+        div(toList([class$("content")]), toList([text3(round3)]))
+      ])),
+      button2("Next", Message$UserClickedNextRound$const)
+    ]))
+  ]));
 }
 function color_class(color) {
   if (color instanceof Red) {
@@ -6216,6 +6323,13 @@ function cell_rect(cell, x, y, direction) {
       } else {
         return attribute2("transform", "rotate(90)");
       }
+    })(),
+    (() => {
+      if (cell instanceof Alive) {
+        return class$("cell alive");
+      } else {
+        return class$("cell dormant");
+      }
     })()
   ]), toList([
     rect(toList([
@@ -6224,14 +6338,7 @@ function cell_rect(cell, x, y, direction) {
       attribute2("rx", "4"),
       attribute2("ry", "4"),
       width(cell_width),
-      height(cell_height),
-      (() => {
-        if (cell instanceof Alive) {
-          return class$("cell alive fill-slate-200");
-        } else {
-          return class$("cell dormant fill-red-900");
-        }
-      })()
+      height(cell_height)
     ])),
     line(toList([
       attribute2("x1", to_string(x - cell_width + 3)),
@@ -6239,14 +6346,7 @@ function cell_rect(cell, x, y, direction) {
       attribute2("x2", to_string(x + cell_width * 2 - 3)),
       attribute2("y2", to_string(y + cell_height - 3)),
       attribute2("stroke-width", "6"),
-      attribute2("stroke-linecap", "round"),
-      (() => {
-        if (cell instanceof Alive) {
-          return class$("cell alive stroke-slate-100");
-        } else {
-          return class$("cell dormant stroke-red-800");
-        }
-      })()
+      attribute2("stroke-linecap", "round")
     ]))
   ]));
 }
@@ -6255,20 +6355,30 @@ function prepend_cell_rects(cell, cell_index, row_index, acc) {
   let y = row_index * cell_width;
   return prepend(cell_rect(cell, x, y, CellDirection$South$const), prepend(cell_rect(cell, x, y, CellDirection$West$const), prepend(cell_rect(cell, x, y, CellDirection$East$const), prepend(cell_rect(cell, x, y, CellDirection$North$const), acc))));
 }
-function square(row, row_index) {
-  return g(toList([class$("round-" + to_string(row_index))]), index_fold(row, List$Empty$const, (acc, cell, cell_index) => {
-    return prepend_cell_rects(cell, cell_index, row_index, acc);
-  }));
-}
 function granny_square(model) {
   return svg(toList([
     class$("granny_square"),
     attribute2("viewBox", "-140 -140 280 280"),
     color_class(model.color)
-  ]), index_map(model.quadrant, square));
-}
-function stat_box(title, content) {
-  return div(toList([class$("stat-box")]), prepend(div(toList([class$("title")]), toList([text3(title)])), content));
+  ]), index_map(model.quadrant, (row, row_index) => {
+    let $ = model.focus_mode;
+    if ($) {
+      let i = row_index;
+      if (i === model.focus_round) {
+        return g(toList([class$("focus")]), index_fold(row, List$Empty$const, (acc, cell, cell_index) => {
+          return prepend_cell_rects(cell, cell_index, row_index, acc);
+        }));
+      } else {
+        return g(toList([class$("dim")]), index_fold(row, List$Empty$const, (acc, cell, cell_index) => {
+          return prepend_cell_rects(cell, cell_index, row_index, acc);
+        }));
+      }
+    } else {
+      return g(toList([class$("focus")]), index_fold(row, List$Empty$const, (acc, cell, cell_index) => {
+        return prepend_cell_rects(cell, cell_index, row_index, acc);
+      }));
+    }
+  }));
 }
 function view(model) {
   let generation = to_string(model.generation);
@@ -6284,7 +6394,17 @@ function view(model) {
   _block$1 = to_string(_pipe$4);
   let color_changes2 = _block$1;
   return main(List$Empty$const, toList([
-    h1(List$Empty$const, toList([text3("Granny Life Motif")])),
+    h1(List$Empty$const, toList([text3("Granny Life Motif Generator")])),
+    div(List$Empty$const, toList([
+      p(List$Empty$const, toList([
+        text3("If you would like to crochet one of these granny squares, use the "),
+        a(toList([
+          href("https://www.ravelry.com/patterns/library/pixie-square")
+        ]), toList([text3("Pixie Square pattern (ravelry)")])),
+        text3(". "),
+        text3("Focus mode can help you keep track of the round you are working.")
+      ]))
+    ])),
     div(toList([class$("stats")]), toList([
       stat_box("Generation", toList([
         div(toList([class$("content")]), toList([text3(generation)]))
@@ -6307,28 +6427,33 @@ function view(model) {
       color_select_button(Color$Violet$const),
       color_select_button(Color$Pink$const)
     ])),
-    div(toList([class$("generation-nav")]), toList([
-      button2("Previous", Message$UserClickedPreviousGen$const),
-      button2("Reset", Message$UserClickedResetGen$const),
-      button2("Next", Message$UserClickedNextGen$const)
-    ])),
-    form(toList([
-      on_submit(process_generation_form),
-      class$("generation-jump-form"),
-      autocomplete("off")
-    ]), toList([
-      label(toList([for$("generation")]), toList([text3("Generation:")])),
-      input(toList([
-        attribute2("type", "number"),
-        placeholder(generation),
-        name("generation"),
-        value("")
-      ])),
-      button(List$Empty$const, toList([text3("Go")]))
+    (() => {
+      let $ = model.focus_mode;
+      if ($) {
+        return focus_navigation(model.focus_round + 1);
+      } else {
+        return generation_navigation();
+      }
+    })(),
+    div(toList([class$("focus-switch")]), toList([focus_switch(model.focus_mode)])),
+    div(List$Empty$const, toList([
+      p(List$Empty$const, toList([
+        text3("This granny square generator is inspired by the work of "),
+        a(toList([href("https://mathgrrl.com")]), toList([text3("mathgrrl")])),
+        text3(" and the "),
+        a(toList([href("https://www.grannylifecrochet.com")]), toList([text3("Granny Life Project")])),
+        text3(".")
+      ]))
     ])),
     footer(toList([class$("p-2 m-2 text-center text-slate-500")]), toList([
       text3("Carefully crafted by "),
-      a(toList([href("https://brainofdane.com")]), toList([text3("Dane")]))
+      a(toList([href("https://brainofdane.com")]), toList([text3("Dane")])),
+      text3("."),
+      div(List$Empty$const, toList([
+        a(toList([
+          href("https://github.com/dahenson/granny_life")
+        ]), toList([text3("source")]))
+      ]))
     ]))
   ]));
 }
@@ -6344,12 +6469,22 @@ function jump_to_generation(model, generation) {
     }
   }
   let quadrant = _block;
-  return new Model(generation, quadrant, model.color);
+  return new Model(model.color, model.focus_mode, 0, generation, quadrant);
+}
+function previous_round(model) {
+  let $ = model.focus_round;
+  let round3 = $;
+  if (round3 < 1) {
+    return model;
+  } else {
+    let round4 = $;
+    return new Model(model.color, model.focus_mode, round4 - 1, model.generation, model.quadrant);
+  }
 }
 function create_previous_generation(model) {
   let generation = model.generation - 1;
   let quadrant = nth_generation(granny_life_gen_0, generation);
-  return new Model(generation, quadrant, model.color);
+  return new Model(model.color, model.focus_mode, 0, generation, quadrant);
 }
 function previous_generation(model) {
   let $ = model.generation;
@@ -6357,21 +6492,39 @@ function previous_generation(model) {
   if (gen > 0) {
     return create_previous_generation(model);
   } else {
+    return new Model(model.color, model.focus_mode, 0, model.generation, model.quadrant);
+  }
+}
+function next_round(model) {
+  let max_round = length(model.quadrant) - 1;
+  let $ = model.focus_round;
+  let focus = $;
+  if (focus >= max_round) {
     return model;
+  } else {
+    let focus2 = $;
+    return new Model(model.color, model.focus_mode, focus2 + 1, model.generation, model.quadrant);
   }
 }
 function next_generation2(model) {
   let generation = model.generation + 1;
   let quadrant = next_generation(model.quadrant);
-  return new Model(generation, quadrant, model.color);
+  return new Model(model.color, model.focus_mode, 0, generation, quadrant);
 }
 function update2(model, message) {
   if (message instanceof UserClickedNextGen) {
     return next_generation2(model);
+  } else if (message instanceof UserClickedNextRound) {
+    return next_round(model);
   } else if (message instanceof UserClickedPreviousGen) {
     return previous_generation(model);
+  } else if (message instanceof UserClickedPreviousRound) {
+    return previous_round(model);
   } else if (message instanceof UserClickedResetGen) {
-    return new Model(0, granny_life_gen_0, model.color);
+    return new Model(model.color, model.focus_mode, 0, 0, granny_life_gen_0);
+  } else if (message instanceof UserToggledFocusMode) {
+    let focus = message[0];
+    return new Model(model.color, focus, model.focus_round, model.generation, model.quadrant);
   } else if (message instanceof UserRequestedInvalidGen) {
     return model;
   } else if (message instanceof UserRequestedNewGen) {
@@ -6379,11 +6532,11 @@ function update2(model, message) {
     return jump_to_generation(model, generation);
   } else {
     let color = message[0];
-    return new Model(model.generation, model.quadrant, color);
+    return new Model(color, model.focus_mode, model.focus_round, model.generation, model.quadrant);
   }
 }
 function init(_) {
-  return new Model(0, granny_life_gen_0, Color$Blue$const);
+  return new Model(Color$Blue$const, false, 0, 0, granny_life_gen_0);
 }
 function main2() {
   let app = simple(init, update2, view);

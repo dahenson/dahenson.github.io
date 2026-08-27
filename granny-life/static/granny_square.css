@@ -11,7 +11,20 @@ main {
 }
 
 h1 {
-  margin: 1em 0em;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: var(--mint-500);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--mint-100);
 }
 
 .stats {
@@ -38,6 +51,37 @@ h1 {
   }
 }
 
+.focus-switch {
+  display: grid;
+  margin: 1em 0;
+}
+button[role='switch'] {
+  background: var(--slate-500);
+  border: 1px solid var(--slate-300);
+  display: block;
+  padding: 0.5em;
+
+  .label {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0 1em 0 0;
+    vertical-align: middle;
+  }
+  .toggle {
+    position: relative;
+    height: 2em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .outer-toggle {
+    fill: var(--slate-900);
+  }
+  .inner-toggle {
+    fill: var(--silver-700);
+  }
+}
+
 .color-button-container {
   display: grid;
   margin: 1em 0;
@@ -54,6 +98,13 @@ h1 {
   @media (min-width: 400px) {
     grid-template-columns: repeat(8, 1fr);
   }
+}
+
+.focus-nav {
+  display: grid;
+  margin: 1em 0;
+  column-gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .generation-nav {
@@ -113,77 +164,128 @@ button {
 }
 
 .granny_square {
-  rect.cell.alive {
-    fill: var(--silver-300);
-  }
-  line.cell.alive {
-    stroke: var(--silver-100);
-  }
-
   &.red {
-    rect.dormant {
-      fill: var(--strawberry-900);
-    }
-    line.dormant {
-      stroke: var(--strawberry-700);
+    .dormant {
+      rect {
+        fill: var(--strawberry-900);
+      }
+
+      line {
+        stroke: var(--strawberry-700);
+      }
     }
   }
+
   &.orange {
-    rect.dormant {
-      fill: var(--orange-900);
-    }
-    line.dormant {
-      stroke: var(--orange-700);
+    .dormant {
+      rect {
+        fill: var(--orange-900);
+      }
+
+      line {
+        stroke: var(--orange-700);
+      }
     }
   }
+
   &.yellow {
-    rect.dormant {
-      fill: var(--banana-900);
-    }
+    .dormant {
+      rect {
+        fill: var(--banana-900);
+      }
 
-    line.dormant {
-      stroke: var(--banana-700);
+      line {
+        stroke: var(--banana-700);
+      }
     }
   }
+
   &.green {
-    rect.dormant {
-      fill: var(--lime-900);
+    .dormant {
+      rect {
+        fill: var(--lime-900);
+      }
+
+      line {
+        stroke: var(--lime-700);
+      }
+    }
+  }
+
+  &.blue {
+    .dormant {
+      rect {
+        fill: var(--mint-900);
+      }
+
+      line {
+        stroke: var(--mint-700);
+      }
+    }
+  }
+
+  &.indigo {
+    .dormant {
+      rect {
+        fill: var(--blueberry-900);
+      }
+
+      line {
+        stroke: var(--blueberry-700);
+      }
+    }
+  }
+
+  &.violet {
+    .dormant {
+      rect {
+        fill: var(--grape-900);
+      }
+
+      line {
+        stroke: var(--grape-700);
+      }
+    }
+  }
+
+  &.pink {
+    .dormant {
+      rect {
+        fill: var(--bubblegum-900);
+      }
+
+      line {
+        stroke: var(--bubblegum-700);
+      }
+    }
+  }
+
+  .alive {
+    rect {
+      fill: var(--silver-300);
+    }
+    line {
+      stroke: var(--silver-100);
+    }
+  }
+
+  .dim {
+    .alive {
+      rect {
+        fill: var(--black-500);
+      }
+      line {
+        stroke: var(--black-300);
+      }
     }
 
-    line.dormant {
-      stroke: var(--lime-700);
-    }
-  }
-  &.blue {
-    rect.dormant {
-      fill: var(--mint-900);
-    }
-    line.dormant {
-      stroke: var(--mint-700);
-    }
-  }
-  &.indigo {
-    rect.dormant {
-      fill: var(--blueberry-900);
-    }
-    line.dormant {
-      stroke: var(--blueberry-700);
-    }
-  }
-  &.violet {
-    rect.dormant {
-      fill: var(--grape-900);
-    }
-    line.dormant {
-      stroke: var(--grape-700);
-    }
-  }
-  &.pink {
-    rect.dormant {
-      fill: var(--bubblegum-900);
-    }
-    line.dormant {
-      stroke: var(--bubblegum-700);
+    .dormant {
+      rect {
+        fill: var(--black-900);
+      }
+      line {
+        stroke: var(--black-700);
+      }
     }
   }
 }
